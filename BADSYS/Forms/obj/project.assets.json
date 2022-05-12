@@ -1,11 +1,68 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DAL.dll": {}
+        }
+      },
+      "DLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "DAL": "1.0.0",
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DLL.dll": {}
+        }
+      },
+      "Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Models.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "DAL/1.0.0": {
+      "type": "project",
+      "path": "../DAL/DAL.csproj",
+      "msbuildProject": "../DAL/DAL.csproj"
+    },
+    "DLL/1.0.0": {
+      "type": "project",
+      "path": "../DLL/DLL.csproj",
+      "msbuildProject": "../DLL/DLL.csproj"
+    },
+    "Models/1.0.0": {
+      "type": "project",
+      "path": "../Models/Models.csproj",
+      "msbuildProject": "../Models/Models.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "DLL >= 1.0.0",
+      "Models >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Shuhei Hagiwara\\.nuget\\packages\\": {}
@@ -33,7 +90,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\DLL\\DLL.csproj": {
+              "projectPath": "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\DLL\\DLL.csproj"
+            },
+            "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\Models\\Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

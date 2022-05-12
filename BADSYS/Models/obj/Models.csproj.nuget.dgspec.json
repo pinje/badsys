@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\Logic_Layer\\Logic_Layer.csproj": {}
+    "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\Models\\Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\Logic_Layer\\Logic_Layer.csproj": {
+    "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\Logic_Layer\\Logic_Layer.csproj",
-        "projectName": "Logic_Layer",
-        "projectPath": "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\Logic_Layer\\Logic_Layer.csproj",
+        "projectUniqueName": "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\Models\\Models.csproj",
+        "projectName": "Models",
+        "projectPath": "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\Shuhei Hagiwara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\Logic_Layer\\obj\\",
+        "outputPath": "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Shuhei Hagiwara\\AppData\\Roaming\\NuGet\\NuGet.Config",

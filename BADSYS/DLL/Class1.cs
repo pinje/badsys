@@ -1,4 +1,4 @@
-﻿namespace Logic_Layer
+﻿namespace DLL
 {
     public class Class1
     {

@@ -1,0 +1,5 @@
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\obj\Debug\net6.0\Forms.csproj.AssemblyReference.cache
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\obj\Debug\net6.0\Forms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\obj\Debug\net6.0\Forms.AssemblyInfoInputs.cache
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\obj\Debug\net6.0\Forms.AssemblyInfo.cs
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\obj\Debug\net6.0\Forms.csproj.CoreCompileInputs.cache

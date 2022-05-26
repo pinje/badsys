@@ -15,22 +15,53 @@ namespace DAL
         {
             participations = new List<Participation>();
             participations.Add(new Participation(1, 2));
+            participations.Add(new Participation(2, 2));
             participations.Add(new Participation(2, 3));
         }
 
-        public Participation AddParticipation(Participation participation)
+        public void AddParticipation(Participation participation)
         {
-            throw new NotImplementedException();
+            participations.Add(participation);
         }
 
-        public List<Participation> GetParticipations()
+        public void DeleteParticipation(Participation participation)
+        {
+            participations.RemoveAll(x => x.PlayerId == participation.PlayerId && x.TournamentId == participation.TournamentId);
+        }
+        public List<Participation> GetAllParticipation()
         {
             return participations;
         }
 
-        void IParticipationDA.AddParticipation(Participation participation)
+        public List<Participation> GetAllParticipationByTournament(int tournamentId)
         {
-            throw new NotImplementedException();
+            List<Participation> filteredList = new List<Participation>();
+
+            foreach(Participation item in participations)
+            {
+                if (item.TournamentId == tournamentId)
+                {
+                    filteredList.Add(item);
+                }
+            }
+
+            return filteredList;
         }
+
+        public List<Participation> GetAllParticipationByPlayer(int playerId)
+        {
+            List<Participation> filteredList = new List<Participation>();
+
+            foreach (Participation item in participations)
+            {
+                if (item.PlayerId == playerId)
+                {
+                    filteredList.Add(item);
+                }
+            }
+
+            return filteredList;
+        }
+
     }
 }

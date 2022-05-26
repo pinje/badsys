@@ -10,3 +10,6 @@ C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\DAL\obj\Deb
 C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\DAL\obj\Debug\net6.0\refint\DAL.dll
 C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\DAL\obj\Debug\net6.0\DAL.pdb
 C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\DAL\obj\Debug\net6.0\ref\DAL.dll
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\DAL\bin\Debug\net6.0\Models.dll
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\DAL\bin\Debug\net6.0\Models.pdb
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\DAL\obj\Debug\net6.0\DAL.csproj.CopyComplete

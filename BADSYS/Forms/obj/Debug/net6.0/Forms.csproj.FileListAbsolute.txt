@@ -3,3 +3,17 @@ C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\obj\D
 C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\obj\Debug\net6.0\Forms.AssemblyInfoInputs.cache
 C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\obj\Debug\net6.0\Forms.AssemblyInfo.cs
 C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\obj\Debug\net6.0\Forms.csproj.CoreCompileInputs.cache
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\bin\Debug\net6.0\Forms.deps.json
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\bin\Debug\net6.0\Forms.dll
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\bin\Debug\net6.0\Forms.pdb
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\bin\Debug\net6.0\DAL.dll
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\bin\Debug\net6.0\DLL.dll
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\bin\Debug\net6.0\Models.dll
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\bin\Debug\net6.0\DLL.pdb
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\bin\Debug\net6.0\Models.pdb
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\bin\Debug\net6.0\DAL.pdb
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\obj\Debug\net6.0\Forms.csproj.CopyComplete
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\obj\Debug\net6.0\Forms.dll
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\obj\Debug\net6.0\refint\Forms.dll
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\obj\Debug\net6.0\Forms.pdb
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\Forms\obj\Debug\net6.0\ref\Forms.dll

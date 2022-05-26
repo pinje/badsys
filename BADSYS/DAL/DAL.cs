@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace DAL
 {
@@ -39,6 +40,38 @@ namespace DAL
             {
                 Console.WriteLine($"Cannot open connection! Error: {ex.Message}");
                 return false;
+            } finally
+            {
+                connection.Close();
+            }
+        }
+
+        protected static DataSet ExecuteSql(string sql, List<KeyValuePair<string, dynamic>> parameters)
+        {
+            try
+            {
+                DataSet dataSet = new DataSet();
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
+                MySqlCommand cmd = connection.CreateCommand();
+
+                foreach (KeyValuePair<string, dynamic> parameter in parameters)
+                {
+                    cmd.Parameters.Add(GetParam(parameter));
+                }
+
+                cmd.CommandText = sql;
+                dataAdapter.SelectCommand = cmd;
+                connection.Open();
+                dataAdapter.Fill(dataSet);
+                return dataSet;
+            } catch (MySqlException ex)
+            {
+                Console.WriteLine($"Cannot open connection! ErrorCode: {ex.ErrorCode} Error: {ex.Message}");
+                return null;
+            } catch (Exception ex)
+            {
+                Console.WriteLine($"Cannot open connection! Error: {ex.Message}");
+                return null;
             } finally
             {
                 connection.Close();

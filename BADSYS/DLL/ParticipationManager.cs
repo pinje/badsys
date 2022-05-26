@@ -11,14 +11,33 @@ namespace DLL
     public class ParticipationManager
     {
         IParticipationDA participation;
+
         public ParticipationManager(IParticipationDA part)
         {
             participation = part;
         }
 
-        public void AddParticipant(Participation registration)
+        public void AddParticipation(Participation registration)
         {
-            participation.AddParticipation(new Participation(1, 2));
+            participation.AddParticipation(registration);
+        }
+
+        public void DeleteParticipation(Participation registration)
+        {
+            participation.DeleteParticipation(registration);
+        }
+        public List<Participation> GetAllParticipation()
+        {
+            return participation.GetAllParticipation();
+        }
+
+        public List<Participation> GetAllParticipationByTournament(int tournamentId)
+        {
+            return participation.GetAllParticipationByTournament(tournamentId);
+        }
+        public List<Participation> GetAllParticipationByPlayer(int playerId)
+        {
+            return participation.GetAllParticipationByPlayer(playerId);
         }
     }
 }

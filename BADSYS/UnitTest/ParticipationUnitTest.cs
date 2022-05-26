@@ -1,9 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DLL;
-using DAL;
+using DAL.ParticipationBranch;
 using Models;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace UnitTest
 {
@@ -14,7 +13,7 @@ namespace UnitTest
         public void AddParticipation_Validate()
         {
             // arrange 
-            ParticipationManager pm = new ParticipationManager(new FakeDAL());
+            ParticipationManager pm = new ParticipationManager(new MockParticipationDAL());
 
             // act
             pm.AddParticipation(new Participation(1, 2));
@@ -29,7 +28,7 @@ namespace UnitTest
         public void DeleteParticipation_Validate()
         {
             // arrange 
-            ParticipationManager pm = new ParticipationManager(new FakeDAL());
+            ParticipationManager pm = new ParticipationManager(new MockParticipationDAL());
 
             // act
             pm.DeleteParticipation(new Participation(1, 2));
@@ -44,7 +43,7 @@ namespace UnitTest
         public void GetAllParticipation_Validate()
         {
             // arrange 
-            ParticipationManager pm = new ParticipationManager(new FakeDAL());
+            ParticipationManager pm = new ParticipationManager(new MockParticipationDAL());
 
             // act
             List<Participation> list = pm.GetAllParticipation();
@@ -58,7 +57,7 @@ namespace UnitTest
         public void GetAllParticipationByTournament_Validate_None()
         {
             // arrange 
-            ParticipationManager pm = new ParticipationManager(new FakeDAL());
+            ParticipationManager pm = new ParticipationManager(new MockParticipationDAL());
 
             // act
             List<Participation> list = pm.GetAllParticipationByTournament(4);
@@ -72,7 +71,7 @@ namespace UnitTest
         public void GetAllParticipationByTournament_Validate_One()
         {
             // arrange 
-            ParticipationManager pm = new ParticipationManager(new FakeDAL());
+            ParticipationManager pm = new ParticipationManager(new MockParticipationDAL());
 
             // act
             List<Participation> list = pm.GetAllParticipationByTournament(3);
@@ -86,7 +85,7 @@ namespace UnitTest
         public void GetAllParticipationByTournament_Validate_Two()
         {
             // arrange 
-            ParticipationManager pm = new ParticipationManager(new FakeDAL());
+            ParticipationManager pm = new ParticipationManager(new MockParticipationDAL());
 
             // act
             List<Participation> list = pm.GetAllParticipationByTournament(2);
@@ -100,7 +99,7 @@ namespace UnitTest
         public void GetAllParticipationByPlayer_Validate_None()
         {
             // arrange 
-            ParticipationManager pm = new ParticipationManager(new FakeDAL());
+            ParticipationManager pm = new ParticipationManager(new MockParticipationDAL());
 
             // act
             List<Participation> list = pm.GetAllParticipationByPlayer(3);
@@ -114,7 +113,7 @@ namespace UnitTest
         public void GetAllParticipationByPlayer_Validate_One()
         {
             // arrange 
-            ParticipationManager pm = new ParticipationManager(new FakeDAL());
+            ParticipationManager pm = new ParticipationManager(new MockParticipationDAL());
 
             // act
             List<Participation> list = pm.GetAllParticipationByPlayer(1);
@@ -128,7 +127,7 @@ namespace UnitTest
         public void GetAllParticipationByPlayer_Validate_Two()
         {
             // arrange 
-            ParticipationManager pm = new ParticipationManager(new FakeDAL());
+            ParticipationManager pm = new ParticipationManager(new MockParticipationDAL());
 
             // act
             List<Participation> list = pm.GetAllParticipationByPlayer(2);

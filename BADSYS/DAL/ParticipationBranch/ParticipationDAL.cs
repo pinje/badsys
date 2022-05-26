@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Models;
 using System.Data;
 
-namespace DAL
+namespace DAL.ParticipationBranch
 {
     public class ParticipationDAL : DAL, IParticipationDA
     {

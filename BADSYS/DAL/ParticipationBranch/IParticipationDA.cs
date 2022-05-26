@@ -1,6 +1,6 @@
 ﻿using Models;
 
-namespace DAL
+namespace DAL.ParticipationBranch
 {
     public interface IParticipationDA
     {

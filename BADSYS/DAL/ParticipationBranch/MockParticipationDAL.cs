@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Models;
 
-namespace DAL
+namespace DAL.ParticipationBranch
 {
-    public class FakeDAL : IParticipationDA
+    public class MockParticipationDAL : IParticipationDA
     {
         List<Participation> participations;
 
-        public FakeDAL()
+        public MockParticipationDAL()
         {
             participations = new List<Participation>();
             participations.Add(new Participation(1, 2));

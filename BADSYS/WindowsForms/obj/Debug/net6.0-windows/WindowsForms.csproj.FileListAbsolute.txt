@@ -1,0 +1,17 @@
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\WindowsForms.exe
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\WindowsForms.deps.json
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\WindowsForms.runtimeconfig.json
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\WindowsForms.dll
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\WindowsForms.pdb
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.csproj.AssemblyReference.cache
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.Form1.resources
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.csproj.GenerateResource.cache
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.AssemblyInfoInputs.cache
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.AssemblyInfo.cs
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.csproj.CoreCompileInputs.cache
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.dll
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\refint\WindowsForms.dll
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.pdb
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.genruntimeconfig.cache
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\ref\WindowsForms.dll

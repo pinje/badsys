@@ -22,7 +22,6 @@ namespace UnitTest
             Tournament expected = tm.GetTournamentById(1);
 
             // assert
-            Assert.AreEqual(expected.Id, 1);
             Assert.AreEqual(expected.Description, "this is a test tournament");
             Assert.AreEqual(expected.StartDate, Convert.ToDateTime("05/05/2022"));
             Assert.AreEqual(expected.EndDate, Convert.ToDateTime("05/05/2022"));
@@ -40,12 +39,11 @@ namespace UnitTest
             TournamentManager tm = new TournamentManager(new MockTournamentDAL());
 
             // act
-            tm.UpdateTournament(0, new Tournament(1, "this is a test tournament", Convert.ToDateTime("05/05/2022"),
+            tm.UpdateTournament(0, new Tournament(0, "this is a test tournament", Convert.ToDateTime("05/05/2022"),
                 Convert.ToDateTime("05/05/2022"), 2, 4, "test address", TournamentSystem.SINGLE_ELIMINATION, TournamentStatus.FINISHED));
             Tournament expected = tm.GetTournamentById(0);
 
             // assert
-            Assert.AreEqual(expected.Id, 1);
             Assert.AreEqual(expected.Description, "this is a test tournament");
             Assert.AreEqual(expected.StartDate, Convert.ToDateTime("05/05/2022"));
             Assert.AreEqual(expected.EndDate, Convert.ToDateTime("05/05/2022"));
@@ -81,7 +79,6 @@ namespace UnitTest
             Tournament expected = tm.GetTournamentById(0);
 
             // assert
-            Assert.AreEqual(expected.Id, 0);
             Assert.AreEqual(expected.Description, "this is a tournament");
             Assert.AreEqual(expected.StartDate, Convert.ToDateTime("05/05/2022"));
             Assert.AreEqual(expected.EndDate, Convert.ToDateTime("05/05/2022"));

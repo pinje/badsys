@@ -20,7 +20,6 @@ namespace Models
 
         public Tournament(int id, string description, DateTime startDate, DateTime endDate, int minPlayer, int maxPlayer, string address, TournamentSystem system, TournamentStatus status)
         {
-            this.id = id;
             this.description = description;
             this.startDate = startDate;
             this.endDate = endDate;

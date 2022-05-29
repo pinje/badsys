@@ -8,8 +8,8 @@ namespace Models
 {
     public enum TournamentSystem
     {
-        ROUND_ROBIN,
-        SINGLE_ELIMINATION,
-        DOUBLE_ELIMINATION
+        ROUND_ROBIN = 0,
+        SINGLE_ELIMINATION = 1,
+        DOUBLE_ELIMINATION = 2
     }
 }

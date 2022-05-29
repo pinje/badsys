@@ -5,7 +5,7 @@ namespace DAL
 {
     public class DAL
     {
-        private static string connectionString = "";
+        private static string connectionString = "Server=studmysql01.fhict.local;Uid=dbi498855;Database=dbi498855;Pwd=Malwelguxfo6;";
         private static MySqlConnection connection = new MySqlConnection(connectionString);
 
         private static MySqlParameter GetParam(KeyValuePair<string, dynamic> parameter)

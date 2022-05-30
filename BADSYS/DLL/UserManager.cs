@@ -22,19 +22,19 @@ namespace DLL
             this.user.AddUser(user);
         }
 
-        public void UpdateUser(User oldUser, User newUser)
+        public void UpdateUser(int userId, User newUser)
         {
-            this.user.UpdateUser(oldUser, newUser);
+            this.user.UpdateUser(userId, newUser);
         }
 
-        public void DeleteUser(User user)
+        public void DeleteUser(int userId)
         {
-            this.user.DeleteUser(user);
+            this.user.DeleteUser(userId);
         }
 
-        public User GetUser(int index)
+        public User GetUser(int userId)
         {
-            return this.user.GetUser(index);
+            return this.user.GetUser(userId);
         }
 
         public List<User> GetAllUsers()

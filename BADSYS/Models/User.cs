@@ -22,6 +22,15 @@ namespace Models
             this.photoPath = photoPath;
         }
 
+        public User(int id, string firstName, string lastName, string email, string photoPath)
+        {
+            this.id = id;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.email = email;
+            this.photoPath = photoPath;
+        }
+
         public int Id { get { return id; } set { id = value; } }
         public string FirstName { get { return firstName; } set { firstName = value; } }
         public string LastName { get { return lastName; } set { lastName = value; } }

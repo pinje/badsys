@@ -16,12 +16,15 @@ namespace UnitTest
             UserManager um = new UserManager(new MockUserDAL());
 
             // act
-            um.AddUser(new User("admin", "admin", "admin@gmail.com", ""));
-            List<User> list = um.GetAllUsers();
-            int expected = list.Count;
+            um.AddUser(new User(1, "admin", "admin", "admin@gmail.com", "default.jpg"));
+            User expected = um.GetUser(1);
 
             // assert
-            Assert.AreEqual(expected, 2);
+            Assert.AreEqual(expected.Id, 1);
+            Assert.AreEqual(expected.FirstName, "admin");
+            Assert.AreEqual(expected.LastName, "admin");
+            Assert.AreEqual(expected.Email, "admin@gmail.com");
+            Assert.AreEqual(expected.PhotoPath, "default.jpg");
         }
 
         [TestMethod]
@@ -31,12 +34,14 @@ namespace UnitTest
             UserManager um = new UserManager(new MockUserDAL());
 
             // act
-            um.UpdateUser(new User("shuhei", "hagiwara", "shuhei@gmail.com", ""), new User("test", "hagiwara", "shuhei@gmail.com", ""));
-            User user = um.GetUser(0);
-            string expected = user.FirstName;
+            um.UpdateUser(0, new User("test", "hagiwara", "shuhei@gmail.com", "test.jpg"));
+            User expected = um.GetUser(0);
 
             // assert
-            Assert.AreEqual(expected, "test");
+            Assert.AreEqual(expected.FirstName, "test");
+            Assert.AreEqual(expected.LastName, "hagiwara");
+            Assert.AreEqual(expected.Email, "shuhei@gmail.com");
+            Assert.AreEqual(expected.PhotoPath, "test.jpg");
         }
 
         [TestMethod]
@@ -46,7 +51,7 @@ namespace UnitTest
             UserManager um = new UserManager(new MockUserDAL());
 
             // act
-            um.DeleteUser(new User("shuhei", "hagiwara", "shuhei@gmail.com", ""));
+            um.DeleteUser(0);
             List<User> list = um.GetAllUsers();
             int expected = list.Count;
 

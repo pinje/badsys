@@ -15,17 +15,17 @@ namespace DAL.UserBranch
             throw new NotImplementedException();
         }
 
-        public void UpdateUser(User oldUser, User newUser)
+        public void UpdateUser(int userId, User newUser)
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteUser(User user)
+        public void DeleteUser(int userId)
         {
             throw new NotImplementedException();
         }
         
-        public User GetUser(int index)
+        public User GetUser(int userId)
         {
             throw new NotImplementedException();
         }

@@ -29,6 +29,17 @@ namespace Models
             this.stage = stage;
         }
 
+        public Match(int tournamentId, string playerOne, string playerTwo, int playerOneScore, int playerTwoScore, MatchStatus status, string stage)
+        {
+            this.tournamentId = tournamentId;
+            this.playerOne = playerOne;
+            this.playerTwo = playerTwo;
+            this.playerOneScore = playerOneScore;
+            this.playerTwoScore = playerTwoScore;
+            this.status = status;
+            this.stage = stage;
+        }
+
         public int Id { get { return id; } set { id = value; } }
         public int TournamentId { get { return tournamentId; } set { tournamentId = value; } }
         public string PlayerOne { get { return playerOne; } set { playerOne = value; } }

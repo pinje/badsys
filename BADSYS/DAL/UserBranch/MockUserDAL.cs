@@ -14,7 +14,7 @@ namespace DAL.UserBranch
         public MockUserDAL()
         {
             users = new List<User>();
-            users.Add(new User("shuhei", "hagiwara", "shuhei@gmail.com", ""));
+            users.Add(new User(0, "shuhei", "hagiwara", "shuhei@gmail.com", ""));
         }
 
         public void AddUser(User user)
@@ -22,25 +22,19 @@ namespace DAL.UserBranch
             users.Add(user);
         }
 
-        public void UpdateUser(User oldUser, User newUser)
+        public void UpdateUser(int userId, User newUser)
         {
-            int index = users.FindIndex(x => 
-            x.FirstName == oldUser.FirstName &&
-            x.LastName == oldUser.LastName &&
-            x.Email == oldUser.Email);
-            users[index] = newUser;
-        }
-        public void DeleteUser(User user)
-        {
-            users.RemoveAll(x => 
-            x.FirstName == user.FirstName &&
-            x.LastName == user.LastName &&
-            x.Email == user.Email);
+            users[userId] = newUser;
         }
 
-        public User GetUser(int index)
+        public void DeleteUser(int userId)
         {
-            return users[index];
+            users.RemoveAt(userId);
+        }
+
+        public User GetUser(int userId)
+        {
+            return users[userId];
         }
 
         public List<User> GetAllUsers()

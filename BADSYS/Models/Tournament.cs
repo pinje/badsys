@@ -18,8 +18,21 @@ namespace Models
         private TournamentSystem system;
         private TournamentStatus status;
 
+        public Tournament(string description, DateTime startDate, DateTime endDate, int minPlayer, int maxPlayer, string address, TournamentSystem system, TournamentStatus status)
+        {
+            this.description = description;
+            this.startDate = startDate;
+            this.endDate = endDate;
+            this.minPlayer = minPlayer;
+            this.maxPlayer = maxPlayer;
+            this.address = address;
+            this.system = system;
+            this.status = status;
+        }
+
         public Tournament(int id, string description, DateTime startDate, DateTime endDate, int minPlayer, int maxPlayer, string address, TournamentSystem system, TournamentStatus status)
         {
+            this.id = id;
             this.description = description;
             this.startDate = startDate;
             this.endDate = endDate;

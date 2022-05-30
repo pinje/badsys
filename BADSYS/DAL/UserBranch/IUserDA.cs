@@ -10,9 +10,9 @@ namespace DAL.UserBranch
     public interface IUserDA
     {
         void AddUser(User user);
-        void UpdateUser(User oldUser, User newUser);
-        void DeleteUser(User user);
-        User GetUser(int index);
+        void UpdateUser(int userId, User newUser);
+        void DeleteUser(int userId);
+        User GetUser(int userId);
         List<User> GetAllUsers();
     }
 }

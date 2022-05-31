@@ -1,3 +1,12 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using Models;
 using DLL;
 using DAL.TournamentBranch;
@@ -6,9 +15,9 @@ using System.Globalization;
 
 namespace WindowsForms
 {
-    public partial class BADSYS : Form
+    public partial class TournamentsForm : Form
     {
-        public BADSYS()
+        public TournamentsForm()
         {
             InitializeComponent();
             comboBox_tournamentSystem.DataSource = Enum.GetValues(typeof(TournamentSystem));
@@ -48,9 +57,51 @@ namespace WindowsForms
             // if there are no errors, add the tournament, then display it to the DVG
             if (!found)
             {
+                ValidateDateInequality(tournament);
+            }
+        }
+
+        // check if data is correct (startdate < enddate, min < max players)
+        public void ValidateDateInequality(Tournament tournament)
+        {
+            // check if dates are correct
+            int result = DateTime.Compare(tournament.StartDate, tournament.EndDate);
+            if (result < 0)
+            {
+                // start date is earlier than end date = correct
+                ValidatePlayerNumberInequality(tournament);
+            } else
+            {
+                // startd date and end date are the same or
+                // start date later than end date = not valid
+                MessageBox.Show("Error: start date and end date impossible");
+            }
+        }
+
+        public void ValidatePlayerNumberInequality(Tournament tournament)
+        {
+            // check if dates are correct
+            int result = tournament.MinPlayer - tournament.MaxPlayer;
+            if (result < 0)
+            {
+                // min players is smaller than max players = correct
                 TournamentManager tournamentManager = new TournamentManager(new TournamentDAL());
                 tournamentManager.AddTournament(tournament);
                 Success();
+            } else if (result == 0)
+            {
+                // min players and max players are the same 
+                // meaning the tournament has a fixed number of players 
+                // like a private tournament
+                MessageBox.Show("Private tournament: Fixed number of players in this tournament");
+                TournamentManager tournamentManager = new TournamentManager(new TournamentDAL());
+                tournamentManager.AddTournament(tournament);
+                Success();
+            }
+            else
+            {
+                // min players is greater than max players = not valid
+                MessageBox.Show("Error: maximum players must be larger than minimum players");
             }
         }
 
@@ -79,7 +130,7 @@ namespace WindowsForms
         public void emptyTextBox()
         {
             // array of all text boxes
-            TextBox[] textboxes = { textBox_tournamentname, textBox_tournamentAddress};
+            TextBox[] textboxes = { textBox_tournamentname, textBox_tournamentAddress };
 
             // array of all combo boxes
             ComboBox[] comboboxes = { comboBox_tournamentSystem };
@@ -135,15 +186,12 @@ namespace WindowsForms
                 EditTournament editTournament = new EditTournament(tournament, tournamentId);
                 editTournament.ShowDialog();
 
-                // confirmation message
-                MessageBox.Show("Tournament updated succesfully");
-
                 // update DVGs
                 DisplayUpdate();
             }
             else
             {
-                MessageBox.Show("failure");
+                MessageBox.Show("no tournament selected");
             }
         }
 
@@ -166,7 +214,7 @@ namespace WindowsForms
             }
             else
             {
-                MessageBox.Show("failure");
+                MessageBox.Show("no tournament selected");
             }
         }
     }

@@ -55,6 +55,9 @@ namespace WindowsForms
             TournamentManager tournamentManager = new TournamentManager(new TournamentDAL());
             tournamentManager.UpdateTournament(tournamentId, tournament);
 
+            // confirmation message
+            MessageBox.Show("Tournament updated succesfully");
+
             Close();
         }
     }

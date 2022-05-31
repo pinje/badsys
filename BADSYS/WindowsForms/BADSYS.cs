@@ -146,5 +146,28 @@ namespace WindowsForms
                 MessageBox.Show("failure");
             }
         }
+
+        private void button_delete_Click(object sender, EventArgs e)
+        {
+            // check if any rows are selected
+            if (mainDVG.SelectedRows.Count > 0)
+            {
+                // get tournament id
+                int tournamentId = Convert.ToInt16(mainDVG.SelectedRows[0].Cells["Id"].Value);
+
+                TournamentManager tournamentManager = new TournamentManager(new TournamentDAL());
+                tournamentManager.DeleteTournament(tournamentId);
+
+                // confirmation message
+                MessageBox.Show("Tournament deleted succesfully");
+
+                // update DVGs
+                DisplayUpdate();
+            }
+            else
+            {
+                MessageBox.Show("failure");
+            }
+        }
     }
 }

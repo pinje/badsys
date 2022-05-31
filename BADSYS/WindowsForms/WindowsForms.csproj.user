@@ -4,5 +4,8 @@
     <Compile Update="BADSYS.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="EditTournament.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

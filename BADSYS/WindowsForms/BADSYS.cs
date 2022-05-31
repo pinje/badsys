@@ -2,6 +2,7 @@ using Models;
 using DLL;
 using DAL.TournamentBranch;
 using System.Data;
+using System.Globalization;
 
 namespace WindowsForms
 {
@@ -17,15 +18,15 @@ namespace WindowsForms
         // add tournament
         private void button_addtournament_Click(object sender, EventArgs e)
         {
-            string name = textBox_tournamentname.ToString();
-            DateTime startDate = Convert.ToDateTime(dateTimePicker_tournamentStart);
-            DateTime endDate = Convert.ToDateTime(dateTimePicker_tournamentEnd);
-            int minPlayers = Convert.ToInt16(numericUpDown_tournamentMin);
-            int maxPlayers = Convert.ToInt16(numericUpDown_tournamentMax);
-            string address = textBox_tournamentAddress.ToString();
+            string name = textBox_tournamentname.Text;
+            DateTime startDate = DateTime.Parse(dateTimePicker_tournamentStart.Value.ToString());
+            DateTime endDate = DateTime.Parse(dateTimePicker_tournamentEnd.Value.ToString());
+            int minPlayers = Convert.ToInt16(numericUpDown_tournamentMin.Value);
+            int maxPlayers = Convert.ToInt16(numericUpDown_tournamentMax.Value);
+            string address = textBox_tournamentAddress.Text;
             TournamentSystem system = (TournamentSystem)comboBox_tournamentSystem.SelectedItem;
 
-            Tournament tournament = new Tournament(3, name, startDate, endDate, minPlayers, maxPlayers, address, system, TournamentStatus.UPCOMING);
+            Tournament tournament = new Tournament(name, startDate, endDate, minPlayers, maxPlayers, address, system, TournamentStatus.UPCOMING);
             ValidateTournament(tournament);
         }
 
@@ -90,31 +91,59 @@ namespace WindowsForms
             NumericUpDown[] numericboxes = { numericUpDown_tournamentMin, numericUpDown_tournamentMax };
 
             // empty all text boxes
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 2; i++)
             {
                 TextBox myTextBox = textboxes[i];
                 myTextBox.Text = string.Empty;
             }
 
             // empty all combo boxes
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 1; i++)
             {
                 ComboBox myComboBox = comboboxes[i];
                 myComboBox.SelectedIndex = -1;
             }
 
             // empty all datetime boxes
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 2; i++)
             {
                 DateTimePicker myDateTimePickerBox = datetimepicker[i];
                 myDateTimePickerBox.Text = string.Empty;
             }
 
             // empty all numeric boxes
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 2; i++)
             {
                 NumericUpDown myNumericBox = numericboxes[i];
                 myNumericBox.Value = 0;
+            }
+        }
+
+        private void button_edit_Click(object sender, EventArgs e)
+        {
+            // check if any rows are selected
+            if (mainDVG.SelectedRows.Count > 0)
+            {
+                // get tournament id
+                int tournamentId = Convert.ToInt16(mainDVG.SelectedRows[0].Cells["Id"].Value);
+
+
+                TournamentManager tournamentManager = new TournamentManager(new TournamentDAL());
+                Tournament tournament = tournamentManager.GetTournamentById(tournamentId);
+
+                // edit tournament popup
+                EditTournament editTournament = new EditTournament(tournament, tournamentId);
+                editTournament.ShowDialog();
+
+                // confirmation message
+                MessageBox.Show("Tournament updated succesfully");
+
+                // update DVGs
+                DisplayUpdate();
+            }
+            else
+            {
+                MessageBox.Show("failure");
             }
         }
     }

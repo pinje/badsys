@@ -31,3 +31,4 @@ C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForm
 C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\DAL.pdb
 C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.BADSYS.resources
 C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.csproj.CopyComplete
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.EditTournament.resources

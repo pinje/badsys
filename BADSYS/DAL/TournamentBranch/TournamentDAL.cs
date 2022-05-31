@@ -18,13 +18,13 @@ namespace DAL.TournamentBranch
             List<KeyValuePair<string, dynamic>> parameters = new List<KeyValuePair<string, dynamic>>
             {
                 new KeyValuePair<string, dynamic>("name", tournament.Description),
-                new KeyValuePair<string, dynamic>("name", tournament.StartDate),
-                new KeyValuePair<string, dynamic>("name", tournament.EndDate),
-                new KeyValuePair<string, dynamic>("name", tournament.MinPlayer),
-                new KeyValuePair<string, dynamic>("name", tournament.MaxPlayer),
-                new KeyValuePair<string, dynamic>("name", tournament.Address),
-                new KeyValuePair<string, dynamic>("name", tournament.System),
-                new KeyValuePair<string, dynamic>("name", tournament.Status)
+                new KeyValuePair<string, dynamic>("startdate", tournament.StartDate),
+                new KeyValuePair<string, dynamic>("enddate", tournament.EndDate),
+                new KeyValuePair<string, dynamic>("min", tournament.MinPlayer),
+                new KeyValuePair<string, dynamic>("max", tournament.MaxPlayer),
+                new KeyValuePair<string, dynamic>("address", tournament.Address),
+                new KeyValuePair<string, dynamic>("system", tournament.System),
+                new KeyValuePair<string, dynamic>("status", tournament.Status)
             };
 
             ExecuteInsert(sql, parameters);
@@ -32,17 +32,66 @@ namespace DAL.TournamentBranch
 
         public void UpdateTournament(int tournamentId, Tournament tournament)
         {
-            throw new NotImplementedException();
+            string sql = "UPDATE sa_tournaments SET name = @name, startDate = @startDate, endDate = @endDate, minPlayers = @minPlayers, maxPlayers = @maxPlayers, " +
+                "address = @address, system = @system, status = @status WHERE `tournamentId` = @tournamentId";
+
+            List<KeyValuePair<string, dynamic>> parameters = new List<KeyValuePair<string, dynamic>>
+            {
+                new KeyValuePair<string, dynamic>("name", tournament.Description),
+                new KeyValuePair<string, dynamic>("startDate", tournament.StartDate),
+                new KeyValuePair<string, dynamic>("endDate", tournament.EndDate),
+                new KeyValuePair<string, dynamic>("minPlayers", tournament.MinPlayer),
+                new KeyValuePair<string, dynamic>("maxPlayers", tournament.MaxPlayer),
+                new KeyValuePair<string, dynamic>("address", tournament.Address),
+                new KeyValuePair<string, dynamic>("system", tournament.System),
+                new KeyValuePair<string, dynamic>("status", tournament.Status),
+                new KeyValuePair<string, dynamic>("tournamentId", tournamentId)
+            };
+
+            ExecuteInsert(sql, parameters);
         }
 
         public void DeleteTournament(int tournamentId)
         {
-            throw new NotImplementedException();
+            string sql = "DELETE FROM sa_tournaments WHERE tournamentId = @tournamentId";
+
+            List<KeyValuePair<string, dynamic>> parameters = new List<KeyValuePair<string, dynamic>>
+            {
+                new KeyValuePair<string, dynamic>("tournamentId", tournamentId)
+            };
+
+            ExecuteInsert(sql, parameters);
         }
 
         public Tournament GetTournamentById(int tournamentId)
         {
-            throw new NotImplementedException();
+            string sql = "SELECT `tournamentId`, `name`, `startDate`, `endDate`, `minPlayers`, `maxPlayers`, `address`, `system`, `status` FROM sa_tournaments WHERE tournamentId = @tournamentId";
+
+            List<KeyValuePair<string, dynamic>> parameters = new List<KeyValuePair<string, dynamic>>
+            {
+                new KeyValuePair<string, dynamic>("tournamentId", tournamentId)
+            };
+
+            DataSet data = ExecuteSql(sql, parameters);
+
+            if (data != null)
+            {
+                int id = Convert.ToInt16(data.Tables[0].Rows[0]["tournamentId"]);
+                string name = data.Tables[0].Rows[0]["name"].ToString();
+                DateTime startDate = Convert.ToDateTime(data.Tables[0].Rows[0]["startDate"]);
+                DateTime endDate = Convert.ToDateTime(data.Tables[0].Rows[0]["endDate"]);
+                int minPlayers = Convert.ToInt16(data.Tables[0].Rows[0]["minPlayers"]);
+                int maxPlayers = Convert.ToInt16(data.Tables[0].Rows[0]["maxPlayers"]);
+                string address = data.Tables[0].Rows[0]["address"].ToString();
+                TournamentSystem system = (TournamentSystem)data.Tables[0].Rows[0]["system"];
+                TournamentStatus status = (TournamentStatus)data.Tables[0].Rows[0]["status"];
+
+                Tournament tournament = new Tournament(id, name, startDate, endDate, minPlayers, maxPlayers, address, system, status);
+                return tournament;
+            } else
+            {
+                return null;
+            }
         }
 
         public List<Tournament> GetAllTournaments()

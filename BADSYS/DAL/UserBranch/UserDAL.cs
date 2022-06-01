@@ -27,7 +27,30 @@ namespace DAL.UserBranch
         
         public User GetUser(int userId)
         {
-            throw new NotImplementedException();
+            string query = "SELECT * FROM sa_users WHERE userId = @userid";
+
+            List<KeyValuePair<string, dynamic>> parameters = new List<KeyValuePair<string, dynamic>>
+            {
+                new KeyValuePair<string, dynamic>("userid", userId)
+            };
+
+            DataSet data = ExecuteSql(query, parameters);
+
+            if (data != null)
+            {
+                int id = Convert.ToInt16(data.Tables[0].Rows[0]["userId"]);
+                string firstName = data.Tables[0].Rows[0]["firstName"].ToString();
+                string lastName = data.Tables[0].Rows[0]["lastName"].ToString();
+                string email = data.Tables[0].Rows[0]["email"].ToString();
+                string photoPath = data.Tables[0].Rows[0]["photoPath"].ToString();
+
+                User user = new User(id, firstName, lastName, email, photoPath);
+                return user;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public List<User> GetAllUsers()

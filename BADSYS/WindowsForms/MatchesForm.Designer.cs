@@ -57,7 +57,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(970, 430);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Tournaments Overview";
+            this.tabPage1.Text = "Matches Overview";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // button_delete
@@ -117,5 +117,13 @@
         private Button button_delete;
         private Button button_edit;
         private DataGridView matchesDVG;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn Column7;
+        private DataGridViewTextBoxColumn Column8;
     }
 }

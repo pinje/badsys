@@ -10,6 +10,7 @@ namespace Models
     {
         private int id;
         private int tournamentId;
+        private string tournamentName;
         private string playerOne;
         private string playerTwo;
         private int playerOneId;
@@ -19,10 +20,10 @@ namespace Models
         private MatchStatus status;
         private string stage;
 
-        public Match(int id, int tournamentId, string playerOne, string playerTwo, int playerOneScore, int playerTwoScore, MatchStatus status, string stage)
+        public Match(int id, string tournamentName, string playerOne, string playerTwo, int playerOneScore, int playerTwoScore, MatchStatus status, string stage)
         {
             this.id = id;
-            this.tournamentId = tournamentId;
+            this.tournamentName = tournamentName;
             this.playerOne = playerOne;
             this.playerTwo = playerTwo;
             this.playerOneScore = playerOneScore;

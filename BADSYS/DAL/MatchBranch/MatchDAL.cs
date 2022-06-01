@@ -12,7 +12,7 @@ namespace DAL.MatchBranch
     {
         public void AddMatch(Match match)
         {
-            string sql = "INSERT INTO sa_matches (tournament, playerOne, playerTwo, playerOneScore, playerTwoScore, status, stage) " +
+            string query = "INSERT INTO sa_matches (tournament, playerOne, playerTwo, playerOneScore, playerTwoScore, status, stage) " +
                 "VALUES (@tournament, @playerone, @playertwo, @playeronescore, @playertwoscore, @status, @stage); ";
 
             List<KeyValuePair<string, dynamic>> parameters = new List<KeyValuePair<string, dynamic>>
@@ -26,12 +26,12 @@ namespace DAL.MatchBranch
                 new KeyValuePair<string, dynamic>("stage", match.Stage)
             };
 
-            ExecuteInsert(sql, parameters);
+            ExecuteInsert(query, parameters);
         }
 
         public void UpdateMatch(int matchId, Match match)
         {
-            string sql = "UPDATE sa_matches SET tournament = @tournament, playerOne = @playerone, playerTwo = @playertwo, playerOneScore = @playeronescore, " +
+            string query = "UPDATE sa_matches SET tournament = @tournament, playerOne = @playerone, playerTwo = @playertwo, playerOneScore = @playeronescore, " +
                 "playerTwoScore = @playertwoscore, status = @status, stage = @stage WHERE `matchId` = @matchid";
 
             List<KeyValuePair<string, dynamic>> parameters = new List<KeyValuePair<string, dynamic>>
@@ -46,12 +46,12 @@ namespace DAL.MatchBranch
                 new KeyValuePair<string, dynamic>("matchid", match.Id)
             };
 
-            ExecuteInsert(sql, parameters);
+            ExecuteInsert(query, parameters);
         }
 
         public Match GetMatchById(int matchid)
         {
-            string sql = "SELECT matchId, tournament, playerOne, playerTwo, playerOneScore, playerTwoScore, status, stage " +
+            string query = "SELECT matchId, tournament, playerOne, playerTwo, playerOneScore, playerTwoScore, status, stage " +
                 "FROM sa_matches" +
                 "WHERE matchId = @matchid";
 
@@ -60,7 +60,7 @@ namespace DAL.MatchBranch
                 new KeyValuePair<string, dynamic>("matchid", matchid)
             };
 
-            DataSet data = ExecuteSql(sql, parameters);
+            DataSet data = ExecuteSql(query, parameters);
 
             if (data != null)
             {
@@ -99,6 +99,7 @@ namespace DAL.MatchBranch
                 int matchId = Convert.ToInt16(data.Tables[0].Rows[row]["matchId"]);
 
                 int tournament = Convert.ToInt16(data.Tables[0].Rows[0]["tournament"]);
+
                 int playerOne = Convert.ToInt16(data.Tables[0].Rows[0]["playerOne"]);
                 int playerTwo = Convert.ToInt16(data.Tables[0].Rows[0]["playerTwo"]);
                 int playerOneScore = Convert.ToInt16(data.Tables[0].Rows[0]["playerOneScore"]);
@@ -111,6 +112,38 @@ namespace DAL.MatchBranch
             }
 
             return matchDetails;
+        }
+
+        public List<Match> GetAllMatchesInString()
+        {
+            //string query = "SELECT * FROM sa_matches";
+
+            //List<KeyValuePair<string, dynamic>> parameters = new List<KeyValuePair<string, dynamic>>
+            //{
+            //};
+
+            //DataSet data = ExecuteSql(query, parameters);
+
+            //List<Match> matchDetails = new List<Match>();
+
+            //for (int row = 0; row < data.Tables[0].Rows.Count; row++)
+            //{
+            //    int matchId = Convert.ToInt16(data.Tables[0].Rows[row]["matchId"]);
+
+            //    int tournament = Convert.ToInt16(data.Tables[0].Rows[0]["tournament"]);
+
+            //    int playerOne = Convert.ToInt16(data.Tables[0].Rows[0]["playerOne"]);
+            //    int playerTwo = Convert.ToInt16(data.Tables[0].Rows[0]["playerTwo"]);
+            //    int playerOneScore = Convert.ToInt16(data.Tables[0].Rows[0]["playerOneScore"]);
+            //    int playerTwoScore = Convert.ToInt16(data.Tables[0].Rows[0]["playerTwoScore"]);
+            //    MatchStatus status = (MatchStatus)data.Tables[0].Rows[0]["status"];
+            //    string stage = data.Tables[0].Rows[0]["stage"].ToString();
+
+
+            //    matchDetails.Add(new Match(matchId, tournament, playerOne, playerTwo, playerOneScore, playerTwoScore, status, stage));
+            //}
+
+            //return matchDetails;
         }
 
         public List<Match> GetAllMatchesByTournamentId(int tournamentId)

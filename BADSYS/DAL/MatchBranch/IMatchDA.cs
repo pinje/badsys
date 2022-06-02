@@ -13,6 +13,7 @@ namespace DAL.MatchBranch
         void UpdateMatch(int matchId, Match match);
         Match GetMatchById(int matchId);
         List<Match> GetAllMatches();
+        List<Match> GetAllMatchesToString();
         List<Match> GetAllMatchesByTournamentId(int tournamentId);
     }
 }

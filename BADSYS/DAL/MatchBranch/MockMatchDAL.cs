@@ -14,7 +14,7 @@ namespace DAL.MatchBranch
         public MockMatchDAL()
         {
             matches = new List<Match>();
-            matches.Add(new Match(0, 0, "1", "2", 22, 19, MatchStatus.FINISHED, "final"));
+            matches.Add(new Match(0, 0, 1, 2, 22, 19, MatchStatus.FINISHED, "final"));
         }
 
         public void AddMatch(Match match)
@@ -33,6 +33,16 @@ namespace DAL.MatchBranch
         }
 
         public List<Match> GetAllMatches()
+        {
+            return matches;
+        }
+
+        public List<Match> GetAllMatchesInString()
+        {
+            return matches;
+        }
+
+        public List<Match> GetAllMatchesToString()
         {
             return matches;
         }

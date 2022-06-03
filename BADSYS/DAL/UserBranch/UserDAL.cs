@@ -55,7 +55,30 @@ namespace DAL.UserBranch
 
         public List<User> GetAllUsers()
         {
-            throw new NotImplementedException();
+            string query = "SELECT userId, firstName, lastName, email, photoPath FROM sa_users";
+
+            List<KeyValuePair<string, dynamic>> parameters = new List<KeyValuePair<string, dynamic>>
+            {
+            };
+
+            DataSet data = ExecuteSql(query, parameters);
+
+            List<User> userDetails = new List<User>();
+
+            for (int row = 0; row < data.Tables[0].Rows.Count; row++)
+            {
+                int userId = Convert.ToInt16(data.Tables[0].Rows[row]["userId"]);
+
+                string firstName = data.Tables[0].Rows[row]["firstName"].ToString();
+                string lastName = data.Tables[0].Rows[row]["lastName"].ToString();
+                string email = data.Tables[0].Rows[row]["email"].ToString();
+                string photoPath = data.Tables[0].Rows[row]["photoPath"].ToString();
+
+
+                userDetails.Add(new User(userId, firstName, lastName, email, photoPath));
+            }
+
+            return userDetails;
         }
     }
 }

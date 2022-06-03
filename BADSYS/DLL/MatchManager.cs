@@ -37,11 +37,6 @@ namespace DLL
             return this.match.GetAllMatches();
         }
 
-        public List<Match> GetAllMatchesToString()
-        {
-            return this.match.GetAllMatchesToString();
-        }
-
         public List<Match> GetAllMatchesByTournamentId(int tournamentId)
         {
             return this.match.GetAllMatchesByTournamentId(tournamentId);

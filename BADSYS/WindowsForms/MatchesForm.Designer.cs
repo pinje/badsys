@@ -30,7 +30,6 @@
         {
             this.tabControl_matches = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button_delete = new System.Windows.Forms.Button();
             this.button_edit = new System.Windows.Forms.Button();
             this.matchesDVG = new System.Windows.Forms.DataGridView();
             this.tabControl_matches.SuspendLayout();
@@ -49,7 +48,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button_delete);
             this.tabPage1.Controls.Add(this.button_edit);
             this.tabPage1.Controls.Add(this.matchesDVG);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
@@ -60,16 +58,6 @@
             this.tabPage1.Text = "Matches Overview";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button_delete
-            // 
-            this.button_delete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_delete.Location = new System.Drawing.Point(846, 104);
-            this.button_delete.Name = "button_delete";
-            this.button_delete.Size = new System.Drawing.Size(95, 35);
-            this.button_delete.TabIndex = 2;
-            this.button_delete.Text = "Delete";
-            this.button_delete.UseVisualStyleBackColor = true;
-            // 
             // button_edit
             // 
             this.button_edit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -79,6 +67,7 @@
             this.button_edit.TabIndex = 1;
             this.button_edit.Text = "Edit";
             this.button_edit.UseVisualStyleBackColor = true;
+            this.button_edit.Click += new System.EventHandler(this.button_edit_Click);
             // 
             // matchesDVG
             // 
@@ -114,7 +103,6 @@
 
         private TabControl tabControl_matches;
         private TabPage tabPage1;
-        private Button button_delete;
         private Button button_edit;
         private DataGridView matchesDVG;
         private DataGridViewTextBoxColumn Column1;

@@ -16,14 +16,14 @@ namespace UnitTest
             MatchManager mm = new MatchManager(new MockMatchDAL());
 
             // act
-            mm.AddMatch(new Match(1, 1, "test1", "test2", 19, 22, MatchStatus.FINISHED, "semifinal"));
+            mm.AddMatch(new Match(1, 1, 3, 3, 19, 22, MatchStatus.FINISHED, "semifinal"));
             Match expected = mm.GetMatchById(1);
 
             // assert
             Assert.AreEqual(expected.Id, 1);
             Assert.AreEqual(expected.TournamentId, 1);
-            Assert.AreEqual(expected.PlayerOne, "test1");
-            Assert.AreEqual(expected.PlayerTwo, "test2");
+            Assert.AreEqual(expected.PlayerOne, 3);
+            Assert.AreEqual(expected.PlayerTwo, 3);
             Assert.AreEqual(expected.PlayerOneScore, 19);
             Assert.AreEqual(expected.PlayerTwoScore, 22);
             Assert.AreEqual(expected.Status, MatchStatus.FINISHED);
@@ -37,14 +37,14 @@ namespace UnitTest
             MatchManager mm = new MatchManager(new MockMatchDAL());
 
             // act
-            mm.UpdateMatch(0, new Match(1, 1, "test1", "test2", 19, 22, MatchStatus.FINISHED, "semifinal"));
+            mm.UpdateMatch(0, new Match(1, 1, 3, 3, 19, 22, MatchStatus.FINISHED, "semifinal"));
             Match expected = mm.GetMatchById(0);
 
             // assert
             Assert.AreEqual(expected.Id, 1);
             Assert.AreEqual(expected.TournamentId, 1);
-            Assert.AreEqual(expected.PlayerOne, "test1");
-            Assert.AreEqual(expected.PlayerTwo, "test2");
+            Assert.AreEqual(expected.PlayerOne, 3);
+            Assert.AreEqual(expected.PlayerTwo, 3);
             Assert.AreEqual(expected.PlayerOneScore, 19);
             Assert.AreEqual(expected.PlayerTwoScore, 22);
             Assert.AreEqual(expected.Status, MatchStatus.FINISHED);

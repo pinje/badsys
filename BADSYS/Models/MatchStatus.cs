@@ -8,7 +8,9 @@ namespace Models
 {
     public enum MatchStatus
     {
-        UPCOMING,
-        FINISHED
+        UPCOMING = 0,
+        FINISHED = 1,
+        CANCELLED = 2,
+        ONHOLD = 3
     }
 }

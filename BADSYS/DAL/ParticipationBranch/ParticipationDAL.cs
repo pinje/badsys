@@ -61,7 +61,26 @@ namespace DAL.ParticipationBranch
 
         public List<Participation> GetAllParticipationByTournament(int tournamentId)
         {
-            throw new NotImplementedException();
+            string query = "SELECT * FROM sa_participations WHERE tournamentId = @tournamentid";
+
+            List<KeyValuePair<string, dynamic>> parameters = new List<KeyValuePair<string, dynamic>>
+            {
+                new KeyValuePair<string, dynamic>("tournamentid", tournamentId)
+            };
+
+            DataSet data = ExecuteSql(query, parameters);
+
+            List<Participation> participationDetails = new List<Participation>();
+
+            for (int row = 0; row < data.Tables[0].Rows.Count; row++)
+            {
+                int playerId = Convert.ToInt16(data.Tables[0].Rows[row]["playerId"]);
+                int tournament = Convert.ToInt16(data.Tables[0].Rows[row]["tournamentId"]);
+
+                participationDetails.Add(new Participation(playerId, tournament));
+            }
+
+            return participationDetails;
         }
         public List<Participation> GetAllParticipationByPlayer(int playerId)
         {

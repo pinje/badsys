@@ -42,10 +42,11 @@ namespace WindowsForms
             matches.Columns.Add("Player 2 Score");
             matches.Columns.Add("Status");
 
-            DataRow row = matches.NewRow();
+            DataRow row;
 
             foreach (Match match in list)
             {
+                row = matches.NewRow();
                 row["Match ID"] = match.Id;
                 row["Tournament Name"] = tournamentManager.GetTournamentById(match.TournamentId).Description;
                 row["Stage"] = match.Stage;

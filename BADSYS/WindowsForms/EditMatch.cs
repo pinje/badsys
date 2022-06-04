@@ -62,9 +62,9 @@ namespace WindowsForms
         private void button_cancel_Click(object sender, EventArgs e)
         {
             MatchManager matchManager = new MatchManager(new MatchDAL());
-            matchManager.GenerateRoundRobin(2);
+            matchManager.GenerateSingleElimination(2);
 
-            Close();
+            Close(); 
         }
 
         private void button_updatematch_Click(object sender, EventArgs e)

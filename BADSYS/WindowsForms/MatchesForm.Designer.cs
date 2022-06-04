@@ -64,7 +64,7 @@
             // 
             this.comboBox_tournamentselect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_tournamentselect.FormattingEnabled = true;
-            this.comboBox_tournamentselect.Location = new System.Drawing.Point(843, 102);
+            this.comboBox_tournamentselect.Location = new System.Drawing.Point(833, 92);
             this.comboBox_tournamentselect.Name = "comboBox_tournamentselect";
             this.comboBox_tournamentselect.Size = new System.Drawing.Size(121, 23);
             this.comboBox_tournamentselect.TabIndex = 2;
@@ -73,7 +73,7 @@
             // button_edit
             // 
             this.button_edit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_edit.Location = new System.Drawing.Point(846, 40);
+            this.button_edit.Location = new System.Drawing.Point(833, 34);
             this.button_edit.Name = "button_edit";
             this.button_edit.Size = new System.Drawing.Size(95, 35);
             this.button_edit.TabIndex = 1;

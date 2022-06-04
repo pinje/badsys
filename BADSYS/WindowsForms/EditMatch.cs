@@ -19,7 +19,7 @@ namespace WindowsForms
         private int matchId;
         private DataTable users = new DataTable();
         public EditMatch(int matchid, string stage, string playerOneName, string playerTwoName, int playerOneId, int playerTwoId, 
-            int playerOneScore, int playerTwoScore, string status)
+            int playerOneScore, int playerTwoScore, int status)
         {
             InitializeComponent();
             label_currentPlayerOne.Text = "(current: " + playerOneName + " )";
@@ -58,8 +58,10 @@ namespace WindowsForms
             textBox_matchstage.Text = stage;
             numericUpDown_player1score.Value = playerOneScore;
             numericUpDown_player2score.Value = playerTwoScore;
-            label_currentstatus.Text = "(current: " + status + " )";
+
             comboBox_matchStatus.DataSource = Enum.GetValues(typeof(MatchStatus));
+            comboBox_matchStatus.SelectedIndex = status;
+
             this.matchId = matchid;
         }
         private void button_cancel_Click(object sender, EventArgs e)

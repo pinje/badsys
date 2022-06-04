@@ -48,7 +48,6 @@
             this.label_currentPlayerOne = new System.Windows.Forms.Label();
             this.label_currentPlayerTwo = new System.Windows.Forms.Label();
             this.comboBox_player2 = new System.Windows.Forms.ComboBox();
-            this.label_currentstatus = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_player2score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_player1score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,7 +61,7 @@
             "ROUND ROBIN",
             "SINGLE ELIMINATION",
             "DOUBLE ELIMINATION"});
-            this.comboBox_matchStatus.Location = new System.Drawing.Point(464, 350);
+            this.comboBox_matchStatus.Location = new System.Drawing.Point(464, 335);
             this.comboBox_matchStatus.Name = "comboBox_matchStatus";
             this.comboBox_matchStatus.Size = new System.Drawing.Size(112, 23);
             this.comboBox_matchStatus.TabIndex = 56;
@@ -226,21 +225,11 @@
             this.comboBox_player2.Size = new System.Drawing.Size(237, 23);
             this.comboBox_player2.TabIndex = 60;
             // 
-            // label_currentstatus
-            // 
-            this.label_currentstatus.AutoSize = true;
-            this.label_currentstatus.Location = new System.Drawing.Point(464, 332);
-            this.label_currentstatus.Name = "label_currentstatus";
-            this.label_currentstatus.Size = new System.Drawing.Size(90, 15);
-            this.label_currentstatus.TabIndex = 61;
-            this.label_currentstatus.Text = "(current: status)";
-            // 
             // EditMatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(862, 504);
-            this.Controls.Add(this.label_currentstatus);
             this.Controls.Add(this.comboBox_player2);
             this.Controls.Add(this.label_currentPlayerTwo);
             this.Controls.Add(this.label_currentPlayerOne);
@@ -291,6 +280,5 @@
         private Label label_currentPlayerOne;
         private Label label_currentPlayerTwo;
         private ComboBox comboBox_player2;
-        private Label label_currentstatus;
     }
 }

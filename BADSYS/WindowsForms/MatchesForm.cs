@@ -105,7 +105,7 @@ namespace WindowsForms
                 int playerOneScore = Convert.ToInt16(matchesDVG.SelectedRows[0].Cells["Player 1 Score"].Value);
                 int playerTwoScore = Convert.ToInt16(matchesDVG.SelectedRows[0].Cells["Player 2 Score"].Value);
 
-                string status = matchesDVG.SelectedRows[0].Cells["Status"].Value.ToString();
+                int status = (int)match.Status;
 
                 string stage = matchesDVG.SelectedRows[0].Cells["Stage"].Value.ToString();
 
@@ -115,7 +115,7 @@ namespace WindowsForms
                 editMatch.ShowDialog();
 
                 // update DVGs
-                //DisplayUpdate();
+                DisplayUpdate(Convert.ToInt16(comboBox_tournamentselect.SelectedValue));
             }
             else
             {

@@ -1,0 +1,203 @@
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+
+/* HEADER */
+
+header {
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+    header > .container {
+        display: grid;
+        grid-template-columns: 75% 25%;
+        grid-template-rows: 1fr;
+    }
+
+.nav-button {
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 2;
+    justify-content: center;
+    align-items: end;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 1fr;
+    padding-bottom: 50px;
+}
+
+.content {
+    grid-column-start: 2;
+}
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.changepassword {
+    background-color: #FFFFC1;
+    /*#f4e871;*/
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    margin-bottom: 50px;
+    border-left: 7px solid #FCD209;
+}
+
+/* NAV BAR */
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+    .navbar-list li {
+        margin-bottom: 40px;
+        transition: margin-left 1s;
+    }
+
+        .navbar-list li:hover {
+            margin-left: 20px;
+        }
+
+.nav-link {
+    text-decoration: none;
+    color: #39B54A;
+    font-size: 22px;
+    padding: 10px;
+}
+
+.nav-button > a {
+    text-decoration: none;
+}
+
+.nav-button > a > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: 3px solid #39B54A;
+    height: 30px;
+    width: 130px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.nav-button > a > .login {
+    transition: 0.5s ease-in;
+    background-color: transparent;
+    color: #39B54A;
+}
+
+.nav-button > a > .logout {
+    background-color: #39B54A;
+    color: white;
+}
+
+.nav-button > a > .login:hover {
+    background-color: #39B54A;
+    color: white;
+}
+
+.nav-button > a > .logout:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(57, 181, 74, 0.5);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(57, 181, 74, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* MISC */
+
+.validation-summary-errors {
+    color: red;
+}
+
+    .validation-summary-errors > ul {
+        padding: 0px;
+    }
+
+.login > form > .label {
+    margin-bottom: 10px;
+}
+
+.validation-text {
+    color: red;
+}
+
+.login-fail {
+    color: red;
+    margin-bottom: 10px;
+}
+
+

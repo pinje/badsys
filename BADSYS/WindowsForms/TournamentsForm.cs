@@ -10,13 +10,16 @@ using System.Windows.Forms;
 using Models;
 using DLL;
 using DAL.TournamentBranch;
-using System.Data;
-using System.Globalization;
+using DAL.MatchBranch;
+using DAL.ParticipationBranch;
 
 namespace WindowsForms
 {
     public partial class TournamentsForm : Form
     {
+        MatchManager matchManager = new MatchManager(new MatchDAL());
+        TournamentManager tournamentManager = new TournamentManager(new TournamentDAL());
+        ParticipationManager participationManager = new ParticipationManager(new ParticipationDAL());
         public TournamentsForm()
         {
             InitializeComponent();
@@ -74,7 +77,7 @@ namespace WindowsForms
             {
                 // startd date and end date are the same or
                 // start date later than end date = not valid
-                MessageBox.Show("Error: start date and end date impossible");
+                MessageBox.Show("Error: start date and end date impossible.");
             }
         }
 
@@ -85,7 +88,6 @@ namespace WindowsForms
             if (result < 0)
             {
                 // min players is smaller than max players = correct
-                TournamentManager tournamentManager = new TournamentManager(new TournamentDAL());
                 tournamentManager.AddTournament(tournament);
                 Success();
             } else if (result == 0)
@@ -93,15 +95,14 @@ namespace WindowsForms
                 // min players and max players are the same 
                 // meaning the tournament has a fixed number of players 
                 // like a private tournament
-                MessageBox.Show("Private tournament: Fixed number of players in this tournament");
-                TournamentManager tournamentManager = new TournamentManager(new TournamentDAL());
+                MessageBox.Show("Private tournament: Fixed number of players in this tournament.");
                 tournamentManager.AddTournament(tournament);
                 Success();
             }
             else
             {
                 // min players is greater than max players = not valid
-                MessageBox.Show("Error: maximum players must be larger than minimum players");
+                MessageBox.Show("Error: maximum players must be larger than minimum players.");
             }
         }
 
@@ -112,7 +113,7 @@ namespace WindowsForms
             DisplayUpdate();
 
             // popup to notify successful data entry
-            MessageBox.Show("Tournament added succesfully");
+            MessageBox.Show("Tournament added succesfully.");
 
             // empty all boxes
             emptyTextBox();
@@ -121,7 +122,6 @@ namespace WindowsForms
         // display data to DVG
         public void DisplayUpdate()
         {
-            TournamentManager tournamentManager = new TournamentManager(new TournamentDAL());
             List<Tournament> list = tournamentManager.GetAllTournaments();
             mainDVG.DataSource = list;
         }
@@ -191,7 +191,7 @@ namespace WindowsForms
             }
             else
             {
-                MessageBox.Show("no tournament selected");
+                MessageBox.Show("No tournament selected.");
             }
         }
 
@@ -207,15 +207,92 @@ namespace WindowsForms
                 tournamentManager.DeleteTournament(tournamentId);
 
                 // confirmation message
-                MessageBox.Show("Tournament deleted succesfully");
+                MessageBox.Show("Tournament deleted succesfully.");
 
                 // update DVGs
                 DisplayUpdate();
             }
             else
             {
-                MessageBox.Show("no tournament selected");
+                MessageBox.Show("No tournament selected.");
             }
+        }
+
+        // brute force start a tournament
+        private void button_forcestart_Click(object sender, EventArgs e)
+        {
+            // check if any rows are selected
+            if (mainDVG.SelectedRows.Count > 0)
+            {
+                // get tournament id, system, status and the tournament itself
+                int tournamentId = Convert.ToInt16(mainDVG.SelectedRows[0].Cells["Id"].Value);
+                TournamentSystem system = (TournamentSystem)mainDVG.SelectedRows[0].Cells["System"].Value;
+                TournamentStatus status = (TournamentStatus)mainDVG.SelectedRows[0].Cells["Status"].Value;
+                Tournament tournament = tournamentManager.GetTournamentById(tournamentId);
+
+                // check if tournament is allowed to be started 
+                if (status == TournamentStatus.FINISHED || status == TournamentStatus.ONGOING || status == TournamentStatus.CANCELED)
+                {
+                    // not allowed
+                    MessageBox.Show("Not allowed to force start because the tournament status is on: " + status);
+                } else
+                {
+                    // if tournament is allowed to start, check number of participants
+                    if (CheckParticipants(tournamentId))
+                    {
+                        // if enough players, ok
+                        StartTournament(system, tournamentId, tournament);
+                    } else
+                    {
+                        // if not enough, not allowed
+                        MessageBox.Show("Not allowed to force start because not enough participants.");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No tournament selected.");
+            }
+        }
+
+        // check number of participants in tournament
+        private bool CheckParticipants(int tournamentId)
+        {
+            List<Participation> participants = participationManager.GetAllParticipationByTournament(tournamentId);
+            if (participants.Count > 0)
+            {
+                return true;
+            } else
+            {
+                return false;
+            }
+        }
+
+        // start tournament, add all matches to db depending on tournament format
+        private void StartTournament(TournamentSystem system, int tournamentId, Tournament tournament)
+        {
+            if (system == TournamentSystem.ROUND_ROBIN)
+            {
+                matchManager.GenerateRoundRobin(tournamentId);
+                tournament.Status = TournamentStatus.ONGOING;
+                tournamentManager.UpdateTournament(tournamentId, tournament);
+            }
+            else if (system == TournamentSystem.SINGLE_ELIMINATION)
+            {
+                matchManager.GenerateSingleElimination(tournamentId);
+                tournament.Status = TournamentStatus.ONGOING;
+                tournamentManager.UpdateTournament(tournamentId, tournament);
+            } // IMPLEMENT DOUBLE ELIM
+            else
+            {
+                //do nothing
+            }
+
+            // confirmation message
+            MessageBox.Show("Tournament started succesfully.");
+
+            // update DVGs
+            DisplayUpdate();
         }
     }
 }

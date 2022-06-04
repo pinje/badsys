@@ -18,6 +18,7 @@ namespace WindowsForms
     public partial class MatchesForm : Form
     {
         private DataTable tournaments = new DataTable();
+
         public MatchesForm()
         {
             InitializeComponent();
@@ -110,7 +111,7 @@ namespace WindowsForms
                 string stage = matchesDVG.SelectedRows[0].Cells["Stage"].Value.ToString();
 
                 // edit match popup
-                EditMatch editMatch = new EditMatch(matchId, stage, playerOneName, playerTwoName, playerOneId, playerTwoId, 
+                EditMatch editMatch = new EditMatch(matchId, stage, playerOneName, playerTwoName, playerOneId, playerTwoId,
                     playerOneScore, playerTwoScore, status);
                 editMatch.ShowDialog();
 
@@ -121,11 +122,6 @@ namespace WindowsForms
             {
                 MessageBox.Show("no match selected");
             }
-        }
-
-        private void comboBox_tournamentselect_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            DisplayUpdate(Convert.ToInt16(comboBox_tournamentselect.SelectedValue));
         }
     }
 }

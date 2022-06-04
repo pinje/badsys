@@ -169,5 +169,10 @@ namespace DLL
                 }
             }
         }
+
+        public void GenerateDoubleElimination(int tournamentId)
+        {
+
+        }
     }
 }

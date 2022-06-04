@@ -50,6 +50,7 @@
             this.dateTimePicker_tournamentStart = new System.Windows.Forms.DateTimePicker();
             this.textBox_tournamentname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button_forcestart = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainDVG)).BeginInit();
@@ -70,6 +71,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button_forcestart);
             this.tabPage1.Controls.Add(this.button_delete);
             this.tabPage1.Controls.Add(this.button_edit);
             this.tabPage1.Controls.Add(this.mainDVG);
@@ -279,6 +281,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tournament Name / Description";
             // 
+            // button_forcestart
+            // 
+            this.button_forcestart.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_forcestart.Location = new System.Drawing.Point(846, 167);
+            this.button_forcestart.Name = "button_forcestart";
+            this.button_forcestart.Size = new System.Drawing.Size(95, 35);
+            this.button_forcestart.TabIndex = 3;
+            this.button_forcestart.Text = "Force Start";
+            this.button_forcestart.UseVisualStyleBackColor = true;
+            this.button_forcestart.Click += new System.EventHandler(this.button_forcestart_Click);
+            // 
             // TournamentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -322,5 +335,6 @@
         private DateTimePicker dateTimePicker_tournamentStart;
         private TextBox textBox_tournamentname;
         private Label label1;
+        private Button button_forcestart;
     }
 }

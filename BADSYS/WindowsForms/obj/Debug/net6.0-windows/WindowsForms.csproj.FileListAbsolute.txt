@@ -35,3 +35,4 @@ C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForm
 C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.TournamentsForm.resources
 C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.Main.resources
 C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.EditMatch.resources
+C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.WaitForm.resources

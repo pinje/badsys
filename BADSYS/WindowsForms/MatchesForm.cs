@@ -18,7 +18,6 @@ namespace WindowsForms
     public partial class MatchesForm : Form
     {
         private DataTable tournaments = new DataTable();
-        private DataTable matches = new DataTable();
         public MatchesForm()
         {
             InitializeComponent();
@@ -52,7 +51,9 @@ namespace WindowsForms
             UserManager userManager = new UserManager(new UserDAL());
 
             List<Match> list = matchManager.GetAllMatchesByTournamentId(tournamentId);
-            
+
+
+            DataTable matches = new DataTable();
             matches.Clear();
 
             matches.Columns.Add("Match ID");
@@ -94,6 +95,12 @@ namespace WindowsForms
                 string playerOneName = matchesDVG.SelectedRows[0].Cells["Player 1 Name"].Value.ToString();
                 string playerTwoName = matchesDVG.SelectedRows[0].Cells["Player 2 Name"].Value.ToString();
 
+                // get player ids
+                MatchManager matchManager = new MatchManager(new MatchDAL());
+                Match match = matchManager.GetMatchById(matchId);
+                int playerOneId = match.PlayerOne;
+                int playerTwoId = match.PlayerTwo;
+
                 // get scores
                 int playerOneScore = Convert.ToInt16(matchesDVG.SelectedRows[0].Cells["Player 1 Score"].Value);
                 int playerTwoScore = Convert.ToInt16(matchesDVG.SelectedRows[0].Cells["Player 2 Score"].Value);
@@ -103,7 +110,8 @@ namespace WindowsForms
                 string stage = matchesDVG.SelectedRows[0].Cells["Stage"].Value.ToString();
 
                 // edit match popup
-                EditMatch editMatch = new EditMatch(matchId, stage, playerOneName, playerTwoName, playerOneScore, playerTwoScore, status);
+                EditMatch editMatch = new EditMatch(matchId, stage, playerOneName, playerTwoName, playerOneId, playerTwoId, 
+                    playerOneScore, playerTwoScore, status);
                 editMatch.ShowDialog();
 
                 // update DVGs

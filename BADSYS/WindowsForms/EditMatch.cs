@@ -18,7 +18,8 @@ namespace WindowsForms
     {
         private int matchId;
         private DataTable users = new DataTable();
-        public EditMatch(int matchid, string stage, string playerOneName, string playerTwoName, int playerOneScore, int playerTwoScore, string status)
+        public EditMatch(int matchid, string stage, string playerOneName, string playerTwoName, int playerOneId, int playerTwoId, 
+            int playerOneScore, int playerTwoScore, string status)
         {
             InitializeComponent();
             label_currentPlayerOne.Text = "(current: " + playerOneName + " )";
@@ -46,11 +47,13 @@ namespace WindowsForms
             comboBox_player1.DataSource = users;
             comboBox_player1.DisplayMember = "Display";
             comboBox_player1.ValueMember = "Match ID";
+            comboBox_player1.SelectedValue = playerOneId;
 
             comboBox_player2.BindingContext = new BindingContext();
             comboBox_player2.DataSource = users;
             comboBox_player2.DisplayMember = "Display";
             comboBox_player2.ValueMember = "Match ID";
+            comboBox_player2.SelectedValue = playerTwoId;
 
             textBox_matchstage.Text = stage;
             numericUpDown_player1score.Value = playerOneScore;

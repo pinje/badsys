@@ -51,7 +51,7 @@ namespace DAL.MatchBranch
         public Match GetMatchById(int matchid)
         {
             string query = "SELECT matchId, tournament, playerOne, playerTwo, playerOneScore, playerTwoScore, status, stage " +
-                "FROM sa_matches" +
+                "FROM sa_matches " +
                 "WHERE matchId = @matchid";
 
             List<KeyValuePair<string, dynamic>> parameters = new List<KeyValuePair<string, dynamic>>

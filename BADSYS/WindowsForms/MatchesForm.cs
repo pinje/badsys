@@ -17,20 +17,42 @@ namespace WindowsForms
 {
     public partial class MatchesForm : Form
     {
+        private DataTable tournaments = new DataTable();
+        private DataTable matches = new DataTable();
         public MatchesForm()
         {
             InitializeComponent();
-            DisplayUpdate();
+            // get all tournament and put them into combo box
+            TournamentManager tournamentManager = new TournamentManager(new TournamentDAL());
+            List<Tournament> list = tournamentManager.GetAllTournaments();
+
+            tournaments.Clear();
+            tournaments.Columns.Add("Display");
+            tournaments.Columns.Add("Tournament ID");
+
+            DataRow row;
+
+            foreach (Tournament tournament in list)
+            {
+                row = tournaments.NewRow();
+                row["Tournament ID"] = tournament.Id;
+                row["Display"] = tournament.Description + " - " + tournament.Id;
+                tournaments.Rows.Add(row);
+            }
+
+            comboBox_tournamentselect.DataSource = tournaments;
+            comboBox_tournamentselect.DisplayMember = "Display";
+            comboBox_tournamentselect.ValueMember = "Tournament ID";
         }
 
-        public void DisplayUpdate()
+        public void DisplayUpdate(int tournamentId)
         {
             MatchManager matchManager = new MatchManager(new MatchDAL());
             TournamentManager tournamentManager = new TournamentManager(new TournamentDAL());
             UserManager userManager = new UserManager(new UserDAL());
 
-            List<Match> list = matchManager.GetAllMatches();
-            DataTable matches = new DataTable();
+            List<Match> list = matchManager.GetAllMatchesByTournamentId(tournamentId);
+            
             matches.Clear();
 
             matches.Columns.Add("Match ID");
@@ -85,12 +107,17 @@ namespace WindowsForms
                 editMatch.ShowDialog();
 
                 // update DVGs
-                DisplayUpdate();
+                //DisplayUpdate();
             }
             else
             {
                 MessageBox.Show("no match selected");
             }
+        }
+
+        private void comboBox_tournamentselect_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            DisplayUpdate(Convert.ToInt16(comboBox_tournamentselect.SelectedValue));
         }
     }
 }

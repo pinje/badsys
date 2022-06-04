@@ -30,6 +30,7 @@
         {
             this.tabControl_matches = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.comboBox_tournamentselect = new System.Windows.Forms.ComboBox();
             this.button_edit = new System.Windows.Forms.Button();
             this.matchesDVG = new System.Windows.Forms.DataGridView();
             this.tabControl_matches.SuspendLayout();
@@ -48,6 +49,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.comboBox_tournamentselect);
             this.tabPage1.Controls.Add(this.button_edit);
             this.tabPage1.Controls.Add(this.matchesDVG);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
@@ -57,6 +59,16 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Matches Overview";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox_tournamentselect
+            // 
+            this.comboBox_tournamentselect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_tournamentselect.FormattingEnabled = true;
+            this.comboBox_tournamentselect.Location = new System.Drawing.Point(843, 102);
+            this.comboBox_tournamentselect.Name = "comboBox_tournamentselect";
+            this.comboBox_tournamentselect.Size = new System.Drawing.Size(121, 23);
+            this.comboBox_tournamentselect.TabIndex = 2;
+            this.comboBox_tournamentselect.SelectionChangeCommitted += new System.EventHandler(this.comboBox_tournamentselect_SelectionChangeCommitted);
             // 
             // button_edit
             // 
@@ -113,5 +125,6 @@
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column8;
+        private ComboBox comboBox_tournamentselect;
     }
 }

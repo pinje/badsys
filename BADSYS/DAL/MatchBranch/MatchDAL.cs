@@ -130,13 +130,13 @@ namespace DAL.MatchBranch
             {
                 int matchId = Convert.ToInt16(data.Tables[0].Rows[row]["matchId"]);
 
-                int tournament = Convert.ToInt16(data.Tables[0].Rows[0]["tournament"]);
-                int playerOne = Convert.ToInt16(data.Tables[0].Rows[0]["playerOne"]);
-                int playerTwo = Convert.ToInt16(data.Tables[0].Rows[0]["playerTwo"]);
-                int playerOneScore = Convert.ToInt16(data.Tables[0].Rows[0]["playerOneScore"]);
-                int playerTwoScore = Convert.ToInt16(data.Tables[0].Rows[0]["playerTwoScore"]);
-                MatchStatus status = (MatchStatus)data.Tables[0].Rows[0]["status"];
-                string stage = data.Tables[0].Rows[0]["stage"].ToString();
+                int tournament = Convert.ToInt16(data.Tables[0].Rows[row]["tournament"]);
+                int playerOne = Convert.ToInt16(data.Tables[0].Rows[row]["playerOne"]);
+                int playerTwo = Convert.ToInt16(data.Tables[0].Rows[row]["playerTwo"]);
+                int playerOneScore = Convert.ToInt16(data.Tables[0].Rows[row]["playerOneScore"]);
+                int playerTwoScore = Convert.ToInt16(data.Tables[0].Rows[row]["playerTwoScore"]);
+                MatchStatus status = (MatchStatus)data.Tables[0].Rows[row]["status"];
+                string stage = data.Tables[0].Rows[row]["stage"].ToString();
 
 
                 matchDetails.Add(new Match(matchId, tournament, playerOne, playerTwo, playerOneScore, playerTwoScore, status, stage));

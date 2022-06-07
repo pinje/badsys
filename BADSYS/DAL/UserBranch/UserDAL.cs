@@ -10,9 +10,24 @@ namespace DAL.UserBranch
 {
     public class UserDAL : DAL, IUserDA
     {
-        public void AddUser(User user)
+        public void AddUser(User user, string password)
         {
-            throw new NotImplementedException();
+            string salt = HashSalt.CreateSalt(8);
+            string hashedPassword = HashSalt.GenerateSHA256Hash(password, salt);
+            string sql = "INSERT INTO sa_users (firstName, lastName, email, photoPath, password, salt) VALUES (@firstname, @lastname, @email, " +
+                "@photopath, @password, @salt); ";
+
+            List<KeyValuePair<string, dynamic>> parameters = new List<KeyValuePair<string, dynamic>>
+            {
+                new KeyValuePair<string, dynamic>("firstname", user.FirstName),
+                new KeyValuePair<string, dynamic>("lastname", user.LastName),
+                new KeyValuePair<string, dynamic>("email", user.Email),
+                new KeyValuePair<string, dynamic>("photopath", user.PhotoPath),
+                new KeyValuePair<string, dynamic>("password", password),
+                new KeyValuePair<string, dynamic>("salt", salt)
+            };
+
+            ExecuteInsert(sql, parameters);
         }
 
         public void UpdateUser(int userId, User newUser)
@@ -27,7 +42,7 @@ namespace DAL.UserBranch
         
         public User GetUser(int userId)
         {
-            string query = "SELECT * FROM sa_users WHERE userId = @userid";
+            string query = "SELECT userId, firstName, lastName, email, photoPath FROM sa_users WHERE userId = @userid";
 
             List<KeyValuePair<string, dynamic>> parameters = new List<KeyValuePair<string, dynamic>>
             {

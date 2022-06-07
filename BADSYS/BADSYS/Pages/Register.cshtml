@@ -4,16 +4,29 @@
     Layout = "_LoginLayout";
 }
 
+@section scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
 <div class="login">
     <h1>REGISTER</h1>
-    <div class="label" asp-validation-summary="All"></div>
     <form method="post" class="login-form">
         <div class="label">Email</div>
-        <input class="form-control" type="password" placeholder="Email address"  />
+        <span class="validation-text" asp-validation-for="RegisterUserViewModel.Email"></span>
+        <input class="form-control" type="text" placeholder="Email Address" asp-for="RegisterUserViewModel.Email" />
+        <div class="label">First Name</div>
+        <span class="validation-text" asp-validation-for="RegisterUserViewModel.Firstname"></span>
+        <input class="form-control" type="text" placeholder="First Name" asp-for="RegisterUserViewModel.Firstname" />
+        <div class="label">Last Name</div>
+        <span class="validation-text" asp-validation-for="RegisterUserViewModel.Lastname"></span>
+        <input class="form-control" type="text" placeholder="Last Name" asp-for="RegisterUserViewModel.Lastname" />
         <div class="label">Password</div>
-        <input class="form-control" type="password" placeholder="Password"  />
+        <span class="validation-text" asp-validation-for="RegisterUserViewModel.Password"></span>
+        <input class="form-control" type="password" placeholder="Password" asp-for="RegisterUserViewModel.Password" />
         <div class="label">Confirm Password</div>
-        <input class="form-control" type="password" placeholder="Confirm Password"  />
+        <span class="validation-text" asp-validation-for="RegisterUserViewModel.ConfirmPassword"></span>
+        <input class="form-control" type="password" placeholder="Confirm Password" asp-for="RegisterUserViewModel.ConfirmPassword" />
+        <div class="login-fail">@Html.ValidationMessage("Uniqueness")</div>
         <div class="option">
             <div class="option1"><a asp-page="/Index"><img src="~/image/arrow.png" style="height: 20px; margin-right: 10px;" /> Go back to home page</a></div>
             <button type="submit" class="submit-button" style="width: auto;">Register</button>

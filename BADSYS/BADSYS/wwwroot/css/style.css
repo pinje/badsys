@@ -155,11 +155,11 @@ ul {
     list-style-type: none;
 }
 
-.register {
+.register-header {
     margin-right: 10px;
 }
 
-.login {
+.login-header {
     margin-left: 10px;
 }
 
@@ -272,3 +272,156 @@ form > .option > .option1 {
     text-decoration: none;
     color: #495057;
 }
+
+/* SEASONS PAGE */
+
+.tournaments-list {
+    margin-bottom: 80px;
+}
+
+.tournaments-list > .row-head {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    margin-bottom: 20px;
+}
+
+.tournaments-list > .row-head > div {
+    text-align: center;
+}
+
+.tournament-name {
+    grid-column-start: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.address {
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.period {
+    grid-column-start: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.min-players {
+    grid-column-start: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.max-players {
+    grid-column-start: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.system {
+    grid-column-start: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.status {
+    grid-column-start: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tournaments-list > a {
+    text-decoration: none;
+    color: black;
+}
+
+.tournaments-list > .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.tournaments-list > .row:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.round-robin-box {
+    font-size: 10px;
+    background-color: #0000ff;
+    color: white;
+    padding: 5px;
+    font-weight: bolder;
+}
+
+.single-elimination-box {
+    font-size: 10px;
+    background-color: #ff6600;
+    color: white;
+    padding: 5px;
+    font-weight: bolder;
+}
+
+.double-elimination-box {
+    font-size: 10px;
+    background-color: #b30000;
+    color: white;
+    padding: 5px;
+    font-weight: bolder;
+}
+
+.period-display {
+    font-weight: bolder;
+    font-size: 10px;
+}
+
+.upcoming-box {
+    font-size: 10px;
+    color: white;
+    padding: 5px;
+    font-weight: bolder;
+    background-color: #33cc33;
+}
+
+.ongoing-box {
+    font-size: 10px;
+    color: white;
+    padding: 5px;
+    font-weight: bolder;
+    background-color: #ffcc00;
+}
+
+.finished-box {
+    font-size: 10px;
+    color: white;
+    padding: 5px;
+    font-weight: bolder;
+    background-color: #ff0000;
+}
+
+.cancelled-box {
+    font-size: 10px;
+    color: white;
+    padding: 5px;
+    font-weight: bolder;
+    background-color: #ccc;
+}
+
+

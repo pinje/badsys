@@ -9,7 +9,7 @@ namespace DAL.UserBranch
 {
     public interface IUserDA
     {
-        void AddUser(User user);
+        void AddUser(User user, string password);
         void UpdateUser(int userId, User newUser);
         void DeleteUser(int userId);
         User GetUser(int userId);

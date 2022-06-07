@@ -17,7 +17,7 @@ namespace DAL.UserBranch
             users.Add(new User(0, "shuhei", "hagiwara", "shuhei@gmail.com", ""));
         }
 
-        public void AddUser(User user)
+        public void AddUser(User user, string password)
         {
             users.Add(user);
         }

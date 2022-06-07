@@ -1,0 +1,57 @@
+﻿@page
+@model BADSYS.Pages.TournamentsModel
+@{
+}
+
+<div class="tournaments-list">
+    <h1>TOURNAMENTS</h1>
+    <div class="row-head">
+        <div class="tournament-name">Tournament Name</div>
+        <div class="address">Address</div>
+        <div class="period">Period</div>
+        <div class="min-players">Min No. of Participants</div>
+        <div class="max-players">Max No. of Participants</div>
+        <div class="system">System</div>
+        <div class="status">Status</div>
+    </div>
+    <!--0 = season number, 1 = name, 2 = location, 3 = country, 4 = year, 5 = startmonth, 6 = endmonth, 7 = totaldays, 8 = totalparticipants-->
+    @foreach (var tournament in Model.tournaments)
+    {
+        <div class="row">
+            <div class="tournament-name">@tournament.Description.ToString()</div>
+            <div class="address">@tournament.Address.ToString()</div>
+            <div class="period">
+                <div class="period-display">STARTING</div>
+                <div>@tournament.StartDate.ToString("dd/MM/yyyy")</div>
+                <div class="period-display">ENDING</div>
+                <div>@tournament.EndDate.ToString("dd/MM/yyyy")</div>
+            </div>
+            <div class="min-players">Min @tournament.MinPlayer</div>
+            <div class="max-players">Max @tournament.MaxPlayer</div>
+            <div class="system">
+                @if (@tournament.System == Models.TournamentSystem.ROUND_ROBIN) {
+                    <div class="round-robin-box">ROUND-ROBIN</div>
+                } else if (@tournament.System == Models.TournamentSystem.SINGLE_ELIMINATION) {
+                    <div class="single-elimination-box">SINGLE-ELIMINATION</div>
+                } else {
+                    <div class="double-elimination-box">DOUBLE-ELIMIANTION</div>
+                }
+            </div>
+            <div class="status">
+                @if (tournament.Status == Models.TournamentStatus.UPCOMING)
+                {
+                    <div class="upcoming-box">UPCOMING</div>
+                } else if (tournament.Status == Models.TournamentStatus.ONGOING)
+                {
+                    <div class="ongoing-box">ONGOING</div>
+                } else if (tournament.Status == Models.TournamentStatus.FINISHED)
+                {
+                    <div class="finished-box">FINISHED</div>
+                } else
+                {
+                    <div class="cancelled-box">CANCELLED</div>
+                }
+            </div>
+        </div>
+    }
+</div>

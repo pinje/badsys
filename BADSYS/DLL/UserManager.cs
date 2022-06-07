@@ -17,9 +17,9 @@ namespace DLL
             this.user = user;
         }
 
-        public void AddUser(User user)
+        public void AddUser(User user, string password)
         {
-            this.user.AddUser(user);
+            this.user.AddUser(user, password);
         }
 
         public void UpdateUser(int userId, User newUser)

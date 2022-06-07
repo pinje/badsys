@@ -1,0 +1,22 @@
+﻿@page
+@model BADSYS.Pages.RegisterModel
+@{
+    Layout = "_LoginLayout";
+}
+
+<div class="login">
+    <h1>REGISTER</h1>
+    <div class="label" asp-validation-summary="All"></div>
+    <form method="post" class="login-form">
+        <div class="label">Email</div>
+        <input class="form-control" type="password" placeholder="Email address"  />
+        <div class="label">Password</div>
+        <input class="form-control" type="password" placeholder="Password"  />
+        <div class="label">Confirm Password</div>
+        <input class="form-control" type="password" placeholder="Confirm Password"  />
+        <div class="option">
+            <div class="option1"><a asp-page="/Index"><img src="~/image/arrow.png" style="height: 20px; margin-right: 10px;" /> Go back to home page</a></div>
+            <button type="submit" class="submit-button" style="width: auto;">Register</button>
+        </div>
+    </form>
+</div>

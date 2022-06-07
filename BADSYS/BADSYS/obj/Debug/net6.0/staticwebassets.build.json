@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mGw+bJyT2Xdf2iVHRRnA2JXk559/vlK+ZIwj7juf6FI=",
+  "Hash": "WByeWHXW//EqC6ecbh6rgq0EkWn0bh/sZIgeK4Mliek=",
   "Source": "BADSYS",
   "BasePath": "_content/BADSYS",
   "Mode": "Default",
@@ -68,6 +68,23 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "C:\\Users\\Shuhei\\Documents\\S2-CB01\\Synthesis Assignment\\badsys\\BADSYS\\BADSYS\\wwwroot\\css\\style.css",
+      "SourceId": "BADSYS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Shuhei\\Documents\\S2-CB01\\Synthesis Assignment\\badsys\\BADSYS\\BADSYS\\wwwroot\\",
+      "BasePath": "_content/BADSYS",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
       "Identity": "C:\\Users\\Shuhei\\Documents\\S2-CB01\\Synthesis Assignment\\badsys\\BADSYS\\BADSYS\\wwwroot\\favicon.ico",
       "SourceId": "BADSYS",
       "SourceType": "Discovered",
@@ -83,6 +100,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Shuhei\\Documents\\S2-CB01\\Synthesis Assignment\\badsys\\BADSYS\\BADSYS\\wwwroot\\image\\arrow.png",
+      "SourceId": "BADSYS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Shuhei\\Documents\\S2-CB01\\Synthesis Assignment\\badsys\\BADSYS\\BADSYS\\wwwroot\\",
+      "BasePath": "_content/BADSYS",
+      "RelativePath": "image/arrow.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\arrow.png"
+    },
+    {
+      "Identity": "C:\\Users\\Shuhei\\Documents\\S2-CB01\\Synthesis Assignment\\badsys\\BADSYS\\BADSYS\\wwwroot\\image\\badsys.png",
+      "SourceId": "BADSYS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Shuhei\\Documents\\S2-CB01\\Synthesis Assignment\\badsys\\BADSYS\\BADSYS\\wwwroot\\",
+      "BasePath": "_content/BADSYS",
+      "RelativePath": "image/badsys.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\badsys.png"
     },
     {
       "Identity": "C:\\Users\\Shuhei\\Documents\\S2-CB01\\Synthesis Assignment\\badsys\\BADSYS\\BADSYS\\wwwroot\\js\\site.js",

@@ -11,7 +11,7 @@
     <header>
         <div class="container">
             <div>
-                <a asp-area="" asp-page="/Index"><img src="~/image/zooftware-t.png" style="height: 150px;" /></a>
+                <a asp-area="" asp-page="/Index"><img src="~/image/badsys.png" style="height: 100px;" /></a>
             </div>
             <form class="nav-button">
                 @if (User.Identity.IsAuthenticated)
@@ -20,17 +20,12 @@
                 }
                 else
                 {
+                    <a asp-page="/Register"><div class="register">Register</div></a>
                     <a asp-page="/Login"><div class="login">Log In</div></a>
                 }
             </form>
         </div>
     </header>
-    @if (User.IsInRole("User") && User.IsInRole("PasswordUnchanged"))
-    {
-        <div class="container changepassword">
-            Your account is not activate. To active it, please change your password <a asp-page="/ChangePassword">HERE</a>.
-        </div>
-    }
 
     <div class="container main">
         <nav class="navbar">
@@ -68,6 +63,9 @@
                     {
                         <li>
                             <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" asp-area="" asp-page="/Index">Tournaments</a>
                         </li>
                     }
                 </ul>

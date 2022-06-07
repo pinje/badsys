@@ -1,0 +1,23 @@
+﻿@page
+@model BADSYS.Pages.UserManagement.LoginModel
+@{
+    Layout = "_LoginLayout";
+}
+
+<div class="login">
+    <h1>LOGIN</h1>
+    <div class="login-fail">@Html.ValidationMessage("LogOnError")</div>
+    <form method="post" class="login-form">
+        <div class="label">Email</div>
+        <span class="validation-text"></span>
+        <input class="form-control" type="text" placeholder="Email address" />
+        <div class="label">Password</div>
+        <span class="validation-text"></span>
+        <input class="form-control" type="password" placeholder="Password" />
+        <div class="option">
+            <div class="option1"><a asp-page="/Index"><img src="~/image/arrow.png" style="height: 20px; margin-right: 10px;" /> Go back to home page</a></div>
+            <button type="submit" class="submit-button">Log In</button>
+        </div>
+    </form>
+</div>
+

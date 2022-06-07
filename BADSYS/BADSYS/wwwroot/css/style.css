@@ -11,7 +11,7 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
+    color: black;
     text-align: left;
     background-color: #fff;
 }
@@ -24,15 +24,15 @@ header {
     padding-bottom: 50px;
 }
 
-    header > .container {
-        display: grid;
-        grid-template-columns: 75% 25%;
-        grid-template-rows: 1fr;
-    }
+header > .container {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 1fr;
+    border-bottom: 1px solid #ccc;
+}
 
 .nav-button {
     display: flex;
-    flex-direction: column;
     grid-column-start: 2;
     justify-content: center;
     align-items: end;
@@ -79,17 +79,6 @@ header {
     }
 }
 
-.changepassword {
-    background-color: #FFFFC1;
-    /*#f4e871;*/
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 20px;
-    margin-bottom: 50px;
-    border-left: 7px solid #FCD209;
-}
-
 /* NAV BAR */
 
 .navbar-list {
@@ -99,54 +88,43 @@ header {
     padding-left: 0;
 }
 
-    .navbar-list li {
-        margin-bottom: 40px;
-        transition: margin-left 1s;
-    }
-
-        .navbar-list li:hover {
-            margin-left: 20px;
-        }
+.navbar-list li {
+    margin-bottom: 40px;
+    transition: margin-left 1s;
+}
 
 .nav-link {
     text-decoration: none;
-    color: #39B54A;
+    color: black;
     font-size: 22px;
     padding: 10px;
 }
 
 .nav-button > a {
     text-decoration: none;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .nav-button > a > div {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 30px;
-    border: 3px solid #39B54A;
     height: 30px;
     width: 130px;
-    margin-bottom: 10px;
     font-size: 20px;
-    padding: 10px;
+    padding-bottom: 20px;
     cursor: pointer;
-}
-
-.nav-button > a > .login {
-    transition: 0.5s ease-in;
-    background-color: transparent;
-    color: #39B54A;
+    color: black;
 }
 
 .nav-button > a > .logout {
-    background-color: #39B54A;
+    background-color: black;
     color: white;
 }
 
-.nav-button > a > .login:hover {
-    background-color: #39B54A;
-    color: white;
+.nav-button > a > div:hover {
+    border-bottom: 3px solid black;
 }
 
 .nav-button > a > .logout:focus {
@@ -177,15 +155,23 @@ ul {
     list-style-type: none;
 }
 
+.register {
+    margin-right: 10px;
+}
+
+.login {
+    margin-left: 10px;
+}
+
 /* MISC */
 
 .validation-summary-errors {
     color: red;
 }
 
-    .validation-summary-errors > ul {
-        padding: 0px;
-    }
+.validation-summary-errors > ul {
+    padding: 0px;
+}
 
 .login > form > .label {
     margin-bottom: 10px;
@@ -200,4 +186,89 @@ ul {
     margin-bottom: 10px;
 }
 
+/* LOGIN PAGE*/
 
+.login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+input {
+    border-radius: 10px;
+    height: 50px;
+    background-color: white;
+    font-size: 20px;
+    border-color: #47b8b8;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    box-sizing: border-box;
+}
+
+.login > form > .option > button {
+    width: 100px;
+}
+
+.submit-button {
+    display: inline-block;
+    font-weight: 400;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid black;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    color: black;
+    border-color: black;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    color: #fff;
+    background-color: black;
+    border-color: black;
+    text-decoration: none;
+}
+
+.submit-button:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(57, 181, 74, 0.5);
+}
+
+form > .option {
+    display: flex;
+    justify-content: space-between;
+}
+
+form > .option > .option1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.option1 > a {
+    text-decoration: none;
+    color: #495057;
+}

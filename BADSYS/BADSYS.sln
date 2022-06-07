@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest", "UnitTest\UnitTest.csproj", "{A19B3E7F-0DE1-430C-9DB5-E2D3CD60142E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForms", "WindowsForms\WindowsForms.csproj", "{B224CB64-BC47-42A1-BEEB-E04225F906D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsForms", "WindowsForms\WindowsForms.csproj", "{B224CB64-BC47-42A1-BEEB-E04225F906D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

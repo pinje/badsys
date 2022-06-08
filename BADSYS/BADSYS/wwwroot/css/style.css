@@ -118,18 +118,8 @@ header > .container {
     color: black;
 }
 
-.nav-button > a > .logout {
-    background-color: black;
-    color: white;
-}
-
 .nav-button > a > div:hover {
     border-bottom: 3px solid black;
-}
-
-.nav-button > a > .logout:focus {
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(57, 181, 74, 0.5);
 }
 
 .dropdown {

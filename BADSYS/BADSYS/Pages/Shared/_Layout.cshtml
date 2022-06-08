@@ -16,7 +16,7 @@
             <form class="nav-button">
                 @if (User.Identity.IsAuthenticated)
                 {
-                    <a asp-page="/Logout"><div class="logout">Log Out</div></a>
+                    <a asp-page="/Logout"><div class="logout-header">Log Out</div></a>
                 }
                 else
                 {
@@ -32,31 +32,16 @@
             <div>
                 <ul class="navbar-list">
 
-                    @if (User.IsInRole("User") && User.IsInRole("PasswordChanged"))
+                    @if (User.IsInRole("User"))
                     {
                         <li>
                             <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" role="button" asp-page="/Schedule">
-                                Schedule
-                            </a>
-                            <ul class="dropdown-content">
-                                <li><a class="nav-link" asp-page="/Timetable">Timetable</a></li>
-                                <li><a class="nav-link" asp-page="/">Preferences</a></li>
-                            </ul>
+                        <li>
+                            <a class="nav-link" asp-area="" asp-page="/Tournaments">Tournaments</a>
                         </li>
                         <li>
                             <a class="nav-link" asp-area="" asp-page="/Profile">Profile</a>
-                        </li>
-                    }
-                    else if (User.IsInRole("User") && User.IsInRole("PasswordUnchanged"))
-                    {
-                        <li>
-                            <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li>
-                            <a class="nav-link" asp-area="" asp-page="/ChangePassword">Change Password</a>
                         </li>
                     }
                     else

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL.UserBranch;
 using Models;
+using DAL;
 
 namespace DLL
 {
@@ -40,6 +41,32 @@ namespace DLL
         public List<User> GetAllUsers()
         {
             return this.user.GetAllUsers();
+        }
+
+        public List<List<string>> GetAllUsersForAuthentication()
+        {
+            return this.user.GetAllUsersForAuthentication();
+        }
+
+        public bool Login(string email, string password)
+        {
+            List<List<string>> users = GetAllUsersForAuthentication();
+            string hashedCheckPassword;
+            foreach (List<string> user in users)
+            {
+                if (user[1] == email)
+                {
+                    hashedCheckPassword = HashSalt.GenerateSHA256Hash(password, user[3]);
+                    if (hashedCheckPassword.Equals(user[2]))
+                    {
+                        return true;
+                    } else
+                    {
+                        return false;
+                    }
+                }
+            }
+            return false;
         }
 
     }

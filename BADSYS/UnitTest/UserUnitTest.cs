@@ -16,7 +16,7 @@ namespace UnitTest
             UserManager um = new UserManager(new MockUserDAL());
 
             // act
-            um.AddUser(new User(1, "admin", "admin", "admin@gmail.com", "default.jpg"));
+            um.AddUser(new User(1, "admin", "admin", "admin@gmail.com", "default.jpg"), "password");
             User expected = um.GetUser(1);
 
             // assert

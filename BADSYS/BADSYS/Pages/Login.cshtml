@@ -9,11 +9,11 @@
     <div class="login-fail">@Html.ValidationMessage("LogOnError")</div>
     <form method="post" class="login-form">
         <div class="label">Email</div>
-        <span class="validation-text"></span>
-        <input class="form-control" type="text" placeholder="Email address" />
+        <span class="validation-text" asp-validation-for="LoginUserViewModel.Email"></span>
+        <input class="form-control" type="text" placeholder="Email address" asp-for="LoginUserViewModel.Email" />
         <div class="label">Password</div>
-        <span class="validation-text"></span>
-        <input class="form-control" type="password" placeholder="Password" />
+        <span class="validation-text" asp-validation-for="LoginUserViewModel.Password"></span>
+        <input class="form-control" type="password" placeholder="Password" asp-for="LoginUserViewModel.Password" />
         <div class="option">
             <div class="option1"><a asp-page="/Index"><img src="~/image/arrow.png" style="height: 20px; margin-right: 10px;" /> Go back to home page</a></div>
             <button type="submit" class="submit-button">Log In</button>

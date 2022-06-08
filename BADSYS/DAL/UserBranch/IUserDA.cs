@@ -14,5 +14,6 @@ namespace DAL.UserBranch
         void DeleteUser(int userId);
         User GetUser(int userId);
         List<User> GetAllUsers();
+        List<List<string>> GetAllUsersForAuthentication();
     }
 }

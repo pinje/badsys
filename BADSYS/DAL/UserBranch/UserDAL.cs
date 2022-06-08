@@ -23,7 +23,7 @@ namespace DAL.UserBranch
                 new KeyValuePair<string, dynamic>("lastname", user.LastName),
                 new KeyValuePair<string, dynamic>("email", user.Email),
                 new KeyValuePair<string, dynamic>("photopath", user.PhotoPath),
-                new KeyValuePair<string, dynamic>("password", password),
+                new KeyValuePair<string, dynamic>("password", hashedPassword),
                 new KeyValuePair<string, dynamic>("salt", salt)
             };
 
@@ -91,6 +91,34 @@ namespace DAL.UserBranch
 
 
                 userDetails.Add(new User(userId, firstName, lastName, email, photoPath));
+            }
+
+            return userDetails;
+        }
+
+        // add method to get all users details for login
+        public List<List<string>> GetAllUsersForAuthentication()
+        {
+            string query = "SELECT userId, email, password, salt FROM sa_users";
+
+            List<KeyValuePair<string, dynamic>> parameters = new List<KeyValuePair<string, dynamic>>
+            {
+            };
+
+            DataSet data = ExecuteSql(query, parameters);
+
+            List<List<string>> userDetails = new List<List<string>>();
+
+            for (int row = 0; row < data.Tables[0].Rows.Count; row++)
+            {
+                string userId = data.Tables[0].Rows[row]["userId"].ToString();
+
+                string email = data.Tables[0].Rows[row]["email"].ToString();
+                string password = data.Tables[0].Rows[row]["password"].ToString();
+                string salt = data.Tables[0].Rows[row]["salt"].ToString();
+
+                List<string> list = new List<string> { userId, email, password, salt };
+                userDetails.Add(list);
             }
 
             return userDetails;

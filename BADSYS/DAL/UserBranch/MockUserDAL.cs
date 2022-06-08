@@ -41,5 +41,10 @@ namespace DAL.UserBranch
         {
             return users;
         }
+
+        public List<List<string>> GetAllUsersForAuthentication()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

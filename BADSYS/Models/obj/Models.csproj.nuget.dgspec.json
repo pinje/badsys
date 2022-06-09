@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Shuhei\\Documents\\S2-CB01\\Synthesis Assignment\\badsys\\BADSYS\\Models\\Models.csproj": {}
+    "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\Models\\Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Shuhei\\Documents\\S2-CB01\\Synthesis Assignment\\badsys\\BADSYS\\Models\\Models.csproj": {
+    "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Shuhei\\Documents\\S2-CB01\\Synthesis Assignment\\badsys\\BADSYS\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\Shuhei\\Documents\\S2-CB01\\Synthesis Assignment\\badsys\\BADSYS\\Models\\Models.csproj",
-        "packagesPath": "C:\\Users\\Shuhei\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Shuhei\\Documents\\S2-CB01\\Synthesis Assignment\\badsys\\BADSYS\\Models\\obj\\",
+        "projectPath": "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\Shuhei Hagiwara\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\Models\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Shuhei\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Shuhei Hagiwara\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

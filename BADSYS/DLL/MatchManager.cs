@@ -12,10 +12,12 @@ namespace DLL
     public class MatchManager
     {
         IMatchDA match;
-
+        ParticipationManager participationManager;
         public MatchManager(IMatchDA match)
         {
             this.match = match;
+            participationManager = new ParticipationManager(new ParticipationDAL());
+
         }
 
         public void AddMatch(Match match)
@@ -51,7 +53,6 @@ namespace DLL
         public void GenerateRoundRobin(int tournamentId)
         {
             // get participants
-            ParticipationManager participationManager = new ParticipationManager(new ParticipationDAL());
             List<Participation> list = participationManager.GetAllParticipationByTournament(tournamentId);
 
             // convert participants id to string

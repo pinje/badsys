@@ -36,3 +36,41 @@ C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForm
 C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.Main.resources
 C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.EditMatch.resources
 C:\Users\Shuhei\Documents\S2-CB01\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.WaitForm.resources
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.csproj.AssemblyReference.cache
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.EditMatch.resources
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.EditTournament.resources
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.Main.resources
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.MatchesForm.resources
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.Properties.Resources.resources
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.TournamentsForm.resources
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.WaitForm.resources
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.csproj.GenerateResource.cache
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.AssemblyInfoInputs.cache
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.AssemblyInfo.cs
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.csproj.CoreCompileInputs.cache
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.dll
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\refint\WindowsForms.dll
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.pdb
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\WindowsForms.exe
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\WindowsForms.deps.json
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\WindowsForms.runtimeconfig.json
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\WindowsForms.dll
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\WindowsForms.pdb
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\Google.Protobuf.dll
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\MySql.Data.dll
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\Ubiety.Dns.Core.dll
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\ZstdNet.dll
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\DAL.dll
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\DLL.dll
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\Models.dll
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\DLL.pdb
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\Models.pdb
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\bin\Debug\net6.0-windows\DAL.pdb
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.csproj.CopyComplete
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\WindowsForms.genruntimeconfig.cache
+C:\Users\Shuhei Hagiwara\Documents\Synthesis Assignment\badsys\BADSYS\WindowsForms\obj\Debug\net6.0-windows\ref\WindowsForms.dll

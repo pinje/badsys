@@ -41,10 +41,11 @@
             // tabControl_matches
             // 
             this.tabControl_matches.Controls.Add(this.tabPage1);
-            this.tabControl_matches.Location = new System.Drawing.Point(10, 8);
+            this.tabControl_matches.Location = new System.Drawing.Point(11, 11);
+            this.tabControl_matches.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabControl_matches.Name = "tabControl_matches";
             this.tabControl_matches.SelectedIndex = 0;
-            this.tabControl_matches.Size = new System.Drawing.Size(978, 458);
+            this.tabControl_matches.Size = new System.Drawing.Size(1118, 611);
             this.tabControl_matches.TabIndex = 4;
             // 
             // tabPage1
@@ -52,10 +53,11 @@
             this.tabPage1.Controls.Add(this.comboBox_tournamentselect);
             this.tabPage1.Controls.Add(this.button_edit);
             this.tabPage1.Controls.Add(this.matchesDVG);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(970, 430);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage1.Size = new System.Drawing.Size(1110, 578);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Matches Overview";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -64,18 +66,20 @@
             // 
             this.comboBox_tournamentselect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_tournamentselect.FormattingEnabled = true;
-            this.comboBox_tournamentselect.Location = new System.Drawing.Point(833, 92);
+            this.comboBox_tournamentselect.Location = new System.Drawing.Point(952, 123);
+            this.comboBox_tournamentselect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox_tournamentselect.Name = "comboBox_tournamentselect";
-            this.comboBox_tournamentselect.Size = new System.Drawing.Size(121, 23);
+            this.comboBox_tournamentselect.Size = new System.Drawing.Size(138, 28);
             this.comboBox_tournamentselect.TabIndex = 2;
             this.comboBox_tournamentselect.SelectionChangeCommitted += new System.EventHandler(this.comboBox_tournamentselect_SelectionChangeCommitted);
             // 
             // button_edit
             // 
             this.button_edit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_edit.Location = new System.Drawing.Point(833, 34);
+            this.button_edit.Location = new System.Drawing.Point(952, 45);
+            this.button_edit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button_edit.Name = "button_edit";
-            this.button_edit.Size = new System.Drawing.Size(95, 35);
+            this.button_edit.Size = new System.Drawing.Size(109, 47);
             this.button_edit.TabIndex = 1;
             this.button_edit.Text = "Edit";
             this.button_edit.UseVisualStyleBackColor = true;
@@ -88,20 +92,23 @@
             this.matchesDVG.AllowUserToOrderColumns = true;
             this.matchesDVG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.matchesDVG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.matchesDVG.Location = new System.Drawing.Point(6, 6);
+            this.matchesDVG.Location = new System.Drawing.Point(7, 8);
+            this.matchesDVG.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.matchesDVG.Name = "matchesDVG";
             this.matchesDVG.ReadOnly = true;
+            this.matchesDVG.RowHeadersWidth = 51;
             this.matchesDVG.RowTemplate.Height = 25;
             this.matchesDVG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.matchesDVG.Size = new System.Drawing.Size(811, 414);
+            this.matchesDVG.Size = new System.Drawing.Size(927, 552);
             this.matchesDVG.TabIndex = 0;
             // 
             // MatchesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 474);
+            this.ClientSize = new System.Drawing.Size(1141, 632);
             this.Controls.Add(this.tabControl_matches);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MatchesForm";
             this.Text = "Matches";
             this.tabControl_matches.ResumeLayout(false);

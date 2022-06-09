@@ -16,5 +16,51 @@
         <div class="content">@Model.User.Email</div>
     </div>
     <h1>PARTICIPATION</h1>
+    <div class="participations-row-head">
+        <div class="tournament-name">Tournament Name</div>
+        <div class="period">Period</div>
+        <div class="system">System</div>
+        <div class="status">Status</div>
+        <div class="ranking">Ranking</div>
+    </div>
+    @foreach (var tournament in Model.TournamentsInformation)
+    {
+        <a asp-page="/Tournament" asp-route-tournamentid="@tournament.Id">
+        <div class="row">
+            <div class="tournament-name">@tournament.Description</div>
+            <div class="period">
+                <div class="period-display">STARTING</div>
+                <div>@tournament.StartDate.ToString("dd/MM/yyyy")</div>
+                <div class="period-display">ENDING</div>
+                <div>@tournament.EndDate.ToString("dd/MM/yyyy")</div>
+            </div>
+            <div class="system">
+                @if (@tournament.System == Models.TournamentSystem.ROUND_ROBIN) {
+                    <div class="round-robin-box">ROUND-ROBIN</div>
+                } else if (@tournament.System == Models.TournamentSystem.SINGLE_ELIMINATION) {
+                    <div class="single-elimination-box">SINGLE-ELIMINATION</div>
+                } else {
+                    <div class="double-elimination-box">DOUBLE-ELIMIANTION</div>
+                }
+            </div>
+            <div class="status">
+                @if (tournament.Status == Models.TournamentStatus.UPCOMING)
+                {
+                    <div class="upcoming-box">UPCOMING</div>
+                } else if (tournament.Status == Models.TournamentStatus.ONGOING)
+                {
+                    <div class="ongoing-box">ONGOING</div>
+                } else if (tournament.Status == Models.TournamentStatus.FINISHED)
+                {
+                    <div class="finished-box">FINISHED</div>
+                } else
+                {
+                    <div class="cancelled-box">CANCELLED</div>
+                }
+            </div>
+            <div class="rank">n/a</div>
+        </div>
+        </a>
+    }
     <h1>MATCH RESULTS</h1>
 </div>

@@ -43,6 +43,11 @@ namespace DLL
             return this.match.GetAllMatchesByTournamentId(tournamentId);
         }
 
+        public List<Match> GetAllMacthesByUserId(int userId)
+        {
+            return this.match.GetAllMatchesByUserId(userId);
+        }
+
         public void GenerateRoundRobin(int tournamentId)
         {
             // get participants

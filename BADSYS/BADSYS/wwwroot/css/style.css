@@ -435,6 +435,17 @@ form > .option > .option1 {
     align-items: center;
 }
 
+.onhold-box {
+    font-size: 10px;
+    color: white;
+    padding: 5px;
+    font-weight: bolder;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* TOURNAMENT INFORMATION PAGE */
 
 .tournament-page {
@@ -614,20 +625,38 @@ form > .option > .option1 {
     color: black;
 }
 
-    .profile > a > .row {
-        display: grid;
-        grid-template-columns: 30% 20% 15% 15% 1fr;
-        font-size: 15px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-    }
+.profile > a > .row {
+    display: grid;
+    grid-template-columns: 30% 20% 15% 15% 1fr;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
 
 .profile > a > .row:hover {
     background-color: #ccc;
     cursor: pointer;
 }
 
+/* PROFILE PAGE : MATCHES RESULTS */
+
+.profile > .matches-row-head {
+    display: grid;
+    grid-template-columns: 20% 20% 15% 5% 5% 5% 15% 15%;
+    grid-template-rows: auto;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.profile > .matches-row {
+    display: grid;
+    grid-template-columns: 20% 20% 15% 5% 5% 5% 15% 15%;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
 
 
 

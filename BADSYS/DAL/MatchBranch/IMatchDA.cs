@@ -14,5 +14,6 @@ namespace DAL.MatchBranch
         Match GetMatchById(int matchId);
         List<Match> GetAllMatches();
         List<Match> GetAllMatchesByTournamentId(int tournamentId);
+        List<Match> GetAllMatchesByUserId(int userId);
     }
 }

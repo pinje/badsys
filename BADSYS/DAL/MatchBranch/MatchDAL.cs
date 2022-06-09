@@ -144,5 +144,37 @@ namespace DAL.MatchBranch
 
             return matchDetails;
         }
+
+        public List<Match> GetAllMatchesByUserId(int userId)
+        {
+            string query = "SELECT * FROM sa_matches WHERE playerOne = @userid OR playerTwo = @userid";
+
+            List<KeyValuePair<string, dynamic>> parameters = new List<KeyValuePair<string, dynamic>>
+            {
+                new KeyValuePair<string, dynamic>("userid", userId)
+            };
+
+            DataSet data = ExecuteSql(query, parameters);
+
+            List<Match> matchDetails = new List<Match>();
+
+            for (int row = 0; row < data.Tables[0].Rows.Count; row++)
+            {
+                int matchId = Convert.ToInt16(data.Tables[0].Rows[row]["matchId"]);
+
+                int tournament = Convert.ToInt16(data.Tables[0].Rows[row]["tournament"]);
+                int playerOne = Convert.ToInt16(data.Tables[0].Rows[row]["playerOne"]);
+                int playerTwo = Convert.ToInt16(data.Tables[0].Rows[row]["playerTwo"]);
+                int playerOneScore = Convert.ToInt16(data.Tables[0].Rows[row]["playerOneScore"]);
+                int playerTwoScore = Convert.ToInt16(data.Tables[0].Rows[row]["playerTwoScore"]);
+                MatchStatus status = (MatchStatus)data.Tables[0].Rows[row]["status"];
+                string stage = data.Tables[0].Rows[row]["stage"].ToString();
+
+
+                matchDetails.Add(new Match(matchId, tournament, playerOne, playerTwo, playerOneScore, playerTwoScore, status, stage));
+            }
+
+            return matchDetails;
+        }
     }
 }

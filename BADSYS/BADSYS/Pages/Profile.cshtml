@@ -1,4 +1,5 @@
 ﻿@page "{userid:int}"
+@using Models
 @model BADSYS.Pages.ProfileModel
 @{
 }
@@ -63,4 +64,51 @@
         </a>
     }
     <h1>MATCH RESULTS</h1>
+    <div class="matches-row-head">
+        <div class="tournament-name">Tournament Name</div>
+        <div class="stage">Stage</div>
+        <div class="playerone">Score</div>
+        <div class="playeronescore"></div>
+        <div class="vs"></div>
+        <div class="playertwoscore"></div>
+        <div class="playertwo"></div>
+        <div class="status"></div>
+    </div>
+    @foreach(var match in Model.MatchesInformation)
+    {
+        <div class="matches-row">
+            <div class="tournament-name">@match[0]</div>
+            <div class="stage">@match[1]</div>
+            <div class="playerone">@match[2]</div>
+            <div class="playeronescore">@match[3]</div>
+            @if (match[6].ToString() == MatchStatus.UPCOMING.ToString())
+                {
+                    <div class="vs">VS</div>
+                } else if (match[6].ToString() == MatchStatus.FINISHED.ToString())
+                {
+                    <div class="vs">-</div>
+                } else if (match[6].ToString() == MatchStatus.CANCELLED.ToString())
+                {
+                    <div class="vs">X</div>
+                } else
+                {
+                    <div class="vs">-</div>
+                }
+            <div class="playertwoscore">@match[5]</div>
+            <div class="playertwo">@match[4]</div>
+            @if (match[6].ToString() == MatchStatus.UPCOMING.ToString())
+                {
+                    <div class="upcoming-box">UPCOMING</div>
+                } else if (match[6].ToString() == MatchStatus.FINISHED.ToString())
+                {
+                    <div class="finished-box">FINISHED</div>
+                } else if (match[6].ToString() == MatchStatus.CANCELLED.ToString())
+                {
+                    <div class="cancelled-box">CANCELLED</div>
+                } else
+                {
+                    <div class="onhold-box">ONHOLD</div>
+                }
+        </div>
+    }
 </div>

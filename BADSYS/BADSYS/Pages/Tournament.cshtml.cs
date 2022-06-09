@@ -5,6 +5,7 @@ using DLL;
 using DAL.TournamentBranch;
 using DAL.ParticipationBranch;
 using DAL.UserBranch;
+using DAL.MatchBranch;
 
 namespace BADSYS.Pages
 {
@@ -24,11 +25,15 @@ namespace BADSYS.Pages
         public DateTime CurrentDate { get; set; }
         [BindProperty]
         public List<List<string>> Participants { get; set; }
+        [BindProperty]
+        public List<Match> AllMatches { get; set; }
 
 
         public int userId;
         public int tournamentId;
         public DateTime startDate;
+
+        ParticipationManager participationManager = new ParticipationManager(new ParticipationDAL());
 
         public void OnGet(int tournamentid)
         {
@@ -89,18 +94,21 @@ namespace BADSYS.Pages
             {
                 IsRegistered = false;
             }
+
+            // tournament results
+            MatchManager matchManager = new MatchManager(new MatchDAL());
+            AllMatches = matchManager.GetAllMatchesByTournamentId(tournamentid);
+            AllMatches.OrderBy(x => x.Id).ToList();
         }
 
         public IActionResult OnPostRegister(int tournamentid, int userid)
         {
-            ParticipationManager participationManager = new ParticipationManager(new ParticipationDAL());
             participationManager.AddParticipation(new Participation(userid, tournamentid));
             return RedirectToPage("/Confirmation/Registration");
         }
 
         public IActionResult OnPostDeregister(int tournamentid, int userid)
         {
-            ParticipationManager participationManager = new ParticipationManager(new ParticipationDAL());
             participationManager.DeleteParticipation(new Participation(userid, tournamentid));
             return RedirectToPage("/Confirmation/Deregistration");
         }

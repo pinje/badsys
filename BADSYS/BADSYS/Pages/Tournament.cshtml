@@ -1,4 +1,5 @@
 ﻿@page "{tournamentid:int}/{handler?}"
+@using Models
 @model BADSYS.Pages.TournamentModel
 @{
 }
@@ -97,6 +98,21 @@
         </div>
     </div>
     <h1>TOURNAMENT RESULTS</h1>
+    @if (Model.Tournament.System == Models.TournamentSystem.ROUND_ROBIN) {
+        // display per round, all matches
+        foreach(Match match in Model.AllMatches)
+        {
+            <div>@match.Id</div>
+        }
+    } else if (Model.Tournament.System == Models.TournamentSystem.SINGLE_ELIMINATION) {
+        // display per round, all matches
+        foreach(Match match in Model.AllMatches)
+        {
+            <div>@match.Id</div>
+        }
+    } else {
+        <h1>DOUBLE ELIMINATION RESULTS</h1>
+    }
     <h1>PARTICIPANTS</h1>
     <div class="participants">
         <div class="name-title" style="font-weight: bold">Name</div>

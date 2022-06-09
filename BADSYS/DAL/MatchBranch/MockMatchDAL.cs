@@ -61,5 +61,10 @@ namespace DAL.MatchBranch
 
             return list;
         }
+
+        public List<Match> GetAllMatchesByUserId(int userId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

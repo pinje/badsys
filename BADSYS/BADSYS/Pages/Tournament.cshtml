@@ -1,0 +1,100 @@
+﻿@page "{tournamentid:int}/{handler?}"
+@model BADSYS.Pages.TournamentModel
+@{
+}
+
+<div class="tournament-page">
+    <h1>TOURNAMENT INFORMATION</h1>
+    <div class="row-head">
+        <div class="tournament-information-section">
+            <div class="title">Tournament Name</div>
+            <div class="content">@Model.Tournament.Description</div>
+            <div class="title">Address</div>
+            <div class="content">@Model.Tournament.Address</div>
+            <div class="title">Start Date</div>
+            <div class="content">@Model.Tournament.StartDate.ToString("dd/MM/yyyy")</div>
+            <div class="title">End Date</div>
+            <div class="content">@Model.Tournament.EndDate.ToString("dd/MM/yyyy")</div>
+            <div class="title">Registration Deadline</div>
+            <div class="content">@Model.Tournament.StartDate.AddDays(-7).ToString("dd/MM/yyyy")</div>
+            <div class="title">Min Players</div>
+            <div class="content">@Model.Tournament.MinPlayer</div>
+            <div class="title">Max Players</div>
+            <div class="content">@Model.Tournament.MaxPlayer</div>
+            <div class="title">System</div>
+            @if (Model.Tournament.System == Models.TournamentSystem.ROUND_ROBIN) {
+                <div class="round-robin-box">ROUND-ROBIN</div>
+            } else if (Model.Tournament.System == Models.TournamentSystem.SINGLE_ELIMINATION) {
+                <div class="single-elimination-box">SINGLE-ELIMINATION</div>
+            } else {
+                <div class="double-elimination-box">DOUBLE-ELIMIANTION</div>
+            }
+            <div class="title">Status</div>
+            @if (Model.Tournament.Status == Models.TournamentStatus.UPCOMING)
+            {
+                <div class="upcoming-box">UPCOMING</div>
+            } else if (Model.Tournament.Status == Models.TournamentStatus.ONGOING)
+            {
+                <div class="ongoing-box">ONGOING</div>
+            } else if (Model.Tournament.Status == Models.TournamentStatus.FINISHED)
+            {
+                <div class="finished-box">FINISHED</div>
+            } else
+            {
+                <div class="cancelled-box">CANCELLED</div>
+            }
+        </div>
+        <div class="current-participants-section">
+            <div class="title">Participants</div>
+            <div class="content">@Model.NumberOfRegistration / @Model.Tournament.MaxPlayer</div>
+        </div>
+        <div class="registration-section">
+            @if (User.Identity.Name == null)
+            {
+                // use needs to login in order to register to the tournament
+                <div class="yellow-box">
+                    <a asp-page="/Register">Create an account</a>
+                    or 
+                    <a asp-page="/Login">Login</a> to register for this tournament
+                </div>
+            } else
+            {
+                // check if registration is allowed (date)
+                if (Model.RegistrationAllowed)
+                {
+                    // check if full or not
+                    if (Model.NumberOfRegistration < Model.Tournament.MaxPlayer)
+                    {
+                        // check if user has already been register
+                        if (Model.IsRegistered)
+                        {
+                            // deny registration
+                            <div class="deregister">
+                                <form method="post" asp-page-handler="Deregister" asp-route-tournamentid="@Model.Tournament.Id" asp-route-userid="@Model.userId">
+                                    <button type="submit">deregister</button>
+                                </form>
+                            </div>
+                        } else
+                        {
+                            <div class="register">
+                                <form method="post" asp-page-handler="Register" asp-route-tournamentid="@Model.Tournament.Id"  asp-route-userid="@Model.userId">
+                                    <button type="submit">register</button>
+                                </form>
+                            </div>
+                        }
+                    } else
+                    {
+                        // full
+                        <div class="yellow-box">CLOSED: Participants FULL</div>
+                    }
+                } else
+                {
+                    // registration not allowed because of time
+                    <div class="yellow-box">CLOSED: Registration Deadline passed</div>
+                }
+                
+            }
+        </div>
+    </div>
+</div>
+

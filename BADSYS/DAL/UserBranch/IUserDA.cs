@@ -13,6 +13,7 @@ namespace DAL.UserBranch
         void UpdateUser(int userId, User newUser);
         void DeleteUser(int userId);
         User GetUser(int userId);
+        int GetUserIdByEmail(string email);
         List<User> GetAllUsers();
         List<List<string>> GetAllUsersForAuthentication();
     }

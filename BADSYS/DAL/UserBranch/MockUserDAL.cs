@@ -37,6 +37,11 @@ namespace DAL.UserBranch
             return users[userId];
         }
 
+        public int GetUserIdByEmail(string email)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<User> GetAllUsers()
         {
             return users;

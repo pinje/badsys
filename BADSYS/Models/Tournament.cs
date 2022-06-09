@@ -19,6 +19,11 @@ namespace Models
         private TournamentSystem system;
         private TournamentStatus status;
 
+        public Tournament()
+        {
+
+        }
+
         public Tournament(string description, DateTime startDate, DateTime endDate, int minPlayer, int maxPlayer, string address, TournamentSystem system, TournamentStatus status)
         {
             this.description = description;

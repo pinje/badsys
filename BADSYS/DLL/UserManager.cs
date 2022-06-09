@@ -38,6 +38,11 @@ namespace DLL
             return this.user.GetUser(userId);
         }
 
+        public int GetUserIdByEmail(string email)
+        {
+            return this.user.GetUserIdByEmail(email);
+        }
+
         public List<User> GetAllUsers()
         {
             return this.user.GetAllUsers();

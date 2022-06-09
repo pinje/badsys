@@ -263,7 +263,7 @@ form > .option > .option1 {
     color: #495057;
 }
 
-/* SEASONS PAGE */
+/* TOURNAMENTS PAGE */
 
 .tournaments-list {
     margin-bottom: 80px;
@@ -339,7 +339,7 @@ form > .option > .option1 {
     color: black;
 }
 
-.tournaments-list > .row {
+.tournaments-list > a > .row {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     font-size: 15px;
@@ -348,7 +348,7 @@ form > .option > .option1 {
     border-bottom: 1px solid #ccc;
 }
 
-.tournaments-list > .row:hover {
+.tournaments-list > a > .row:hover {
     background-color: #ccc;
     cursor: pointer;
 }
@@ -359,6 +359,9 @@ form > .option > .option1 {
     color: white;
     padding: 5px;
     font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .single-elimination-box {
@@ -367,6 +370,9 @@ form > .option > .option1 {
     color: white;
     padding: 5px;
     font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .double-elimination-box {
@@ -375,6 +381,9 @@ form > .option > .option1 {
     color: white;
     padding: 5px;
     font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .period-display {
@@ -388,6 +397,9 @@ form > .option > .option1 {
     padding: 5px;
     font-weight: bolder;
     background-color: #33cc33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ongoing-box {
@@ -396,6 +408,9 @@ form > .option > .option1 {
     padding: 5px;
     font-weight: bolder;
     background-color: #ffcc00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .finished-box {
@@ -404,6 +419,9 @@ form > .option > .option1 {
     padding: 5px;
     font-weight: bolder;
     background-color: #ff0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cancelled-box {
@@ -412,6 +430,117 @@ form > .option > .option1 {
     padding: 5px;
     font-weight: bolder;
     background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* TOURNAMENT INFORMATION PAGE */
+
+.tournament-page {
+    margin-bottom: 80px;
+}
+
+.tournament-page > .row-head {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    margin-bottom: 20px;
+}
+
+.tournament-information-section {
+    grid-column-start: 1;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto;
+    font-size: 15px;
+}
+
+.tournament-information-section > div {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.tournament-information-section > .title {
+    grid-column-start: 1;
+    font-weight: bold;
+}
+
+.tournament-information-section > .content {
+    grid-column-start: 2;
+}
+
+.current-participants-section {
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.current-participants-section > .title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.current-participants-section > .content {
+    font-size: 30px;
+}
+
+.registration-section {
+    grid-column-start: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-section > .yellow-box {
+    background-color: #FFFFC1;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    margin-bottom: 50px;
+    border-left: 7px solid #FCD209;
+}
+
+.registration-section > .deregister > form > button {
+    background-color: #ff5050;
+    color: white;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    border-bottom: 8px solid #ff3333;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+
+.registration-section > .register > form > button {
+    background-color: #70db70;
+    color: white;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    border-bottom: 8px solid #33cc33;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+
+
 
 

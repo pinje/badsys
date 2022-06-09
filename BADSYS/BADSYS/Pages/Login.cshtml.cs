@@ -28,7 +28,7 @@ namespace BADSYS.Pages.UserManagement
                 {
 
                     List<Claim> claims = new List<Claim>();
-                    claims.Add(new Claim(ClaimTypes.Email, LoginUserViewModel.Email));
+                    claims.Add(new Claim(ClaimTypes.Name, LoginUserViewModel.Email));
                     claims.Add(new Claim(ClaimTypes.Role, "User"));
 
                     var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);

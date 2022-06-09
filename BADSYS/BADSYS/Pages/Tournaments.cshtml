@@ -14,9 +14,9 @@
         <div class="system">System</div>
         <div class="status">Status</div>
     </div>
-    <!--0 = season number, 1 = name, 2 = location, 3 = country, 4 = year, 5 = startmonth, 6 = endmonth, 7 = totaldays, 8 = totalparticipants-->
     @foreach (var tournament in Model.tournaments)
     {
+        <a asp-page="/Tournament" asp-route-tournamentid="@tournament.Id">
         <div class="row">
             <div class="tournament-name">@tournament.Description.ToString()</div>
             <div class="address">@tournament.Address.ToString()</div>
@@ -53,5 +53,6 @@
                 }
             </div>
         </div>
+        </a>
     }
 </div>

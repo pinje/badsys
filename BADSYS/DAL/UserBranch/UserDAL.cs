@@ -68,6 +68,28 @@ namespace DAL.UserBranch
             }
         }
 
+        public int GetUserIdByEmail(string email)
+        {
+            string query = "SELECT userId FROM sa_users WHERE email = @email";
+
+            List<KeyValuePair<string, dynamic>> parameters = new List<KeyValuePair<string, dynamic>>
+            {
+                new KeyValuePair<string, dynamic>("email", email)
+            };
+
+            DataSet data = ExecuteSql(query, parameters);
+
+            if (data != null)
+            {
+                int id = Convert.ToInt16(data.Tables[0].Rows[0]["userId"]);
+                return id;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
         public List<User> GetAllUsers()
         {
             string query = "SELECT userId, firstName, lastName, email, photoPath FROM sa_users";

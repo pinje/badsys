@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using DLL;
+@using DAL.UserBranch;
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -41,7 +44,8 @@
                             <a class="nav-link" asp-area="" asp-page="/Tournaments">Tournaments</a>
                         </li>
                         <li>
-                            <a class="nav-link" asp-area="" asp-page="/Profile">Profile</a>
+                            @{UserManager userManager = new UserManager(new UserDAL()); int userId = userManager.GetUserIdByEmail(User.Identity.Name);}
+                            <a class="nav-link" asp-area="" asp-page="/Profile" asp-route-userid="@userId">Profile</a>
                         </li>
                     }
                     else

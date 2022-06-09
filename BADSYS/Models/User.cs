@@ -14,6 +14,11 @@ namespace Models
         private string email;
         private string photoPath;
 
+        public User()
+        {
+
+        }
+
         public User(string firstName, string lastName, string email, string photoPath)
         {
             this.firstName = firstName;

@@ -9,5 +9,6 @@ namespace DAL.ParticipationBranch
         List<Participation> GetAllParticipation();
         List<Participation> GetAllParticipationByTournament(int tournamentId);
         List<Participation> GetAllParticipationByPlayer(int playerId);
+        List<List<string>> GetParticipantsNameByTournament(int tournamentid);
     }
 }

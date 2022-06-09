@@ -1,4 +1,20 @@
-﻿@page
+﻿@page "{userid:int}"
 @model BADSYS.Pages.ProfileModel
 @{
 }
+
+<div class="profile">
+    <h1>GENERAL INFORMATION</h1>
+    <div class="general-info">
+        <div class="title">User ID</div>
+        <div class="content">@Model.User.Id</div>
+        <div class="title">First Name</div>
+        <div class="content">@Model.User.FirstName</div>
+        <div class="title">Last Name</div>
+        <div class="content">@Model.User.LastName</div>
+        <div class="title">Email</div>
+        <div class="content">@Model.User.Email</div>
+    </div>
+    <h1>PARTICIPATION</h1>
+    <h1>MATCH RESULTS</h1>
+</div>

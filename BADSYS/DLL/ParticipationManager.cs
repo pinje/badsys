@@ -39,5 +39,10 @@ namespace DLL
         {
             return participation.GetAllParticipationByPlayer(playerId);
         }
+
+        public List<List<string>> GetParticipantsNameByTournament(int tournamentid)
+        {
+            return participation.GetParticipantsNameByTournament(tournamentid);
+        }
     }
 }

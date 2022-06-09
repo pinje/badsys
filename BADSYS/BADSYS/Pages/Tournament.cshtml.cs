@@ -22,6 +22,8 @@ namespace BADSYS.Pages
         public bool RegistrationAllowed { get; set; }
         [BindProperty]
         public DateTime CurrentDate { get; set; }
+        [BindProperty]
+        public List<List<string>> Participants { get; set; }
 
 
         public int userId;
@@ -53,6 +55,8 @@ namespace BADSYS.Pages
                 RegistrationAllowed = false;
             }
 
+            // get participants names
+            Participants = participationManager.GetParticipantsNameByTournament(tournamentid);
 
             // get number of current registration 
             ListOfParticipation = participationManager.GetAllParticipationByTournament(tournamentid);

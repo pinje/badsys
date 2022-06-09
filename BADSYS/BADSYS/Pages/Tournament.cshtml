@@ -96,5 +96,15 @@
             }
         </div>
     </div>
+    <h1>TOURNAMENT RESULTS</h1>
+    <h1>PARTICIPANTS</h1>
+    <div class="participants">
+        <div class="name-title" style="font-weight: bold">Name</div>
+        @foreach(var participant in Model.Participants)
+        {
+            <!-- 2 = firstname, 3 = lastname-->
+            <div class="name">@participant[2] @participant[3]</div>
+        }
+    </div>
 </div>
 

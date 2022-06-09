@@ -37,7 +37,7 @@ namespace DAL.ParticipationBranch
         {
             List<Participation> filteredList = new List<Participation>();
 
-            foreach(Participation item in participations)
+            foreach (Participation item in participations)
             {
                 if (item.TournamentId == tournamentId)
                 {
@@ -61,6 +61,11 @@ namespace DAL.ParticipationBranch
             }
 
             return filteredList;
+        }
+
+        public List<List<string>> GetParticipantsNameByTournament(int tournamentid)
+        {
+            throw new NotImplementedException();
         }
 
     }

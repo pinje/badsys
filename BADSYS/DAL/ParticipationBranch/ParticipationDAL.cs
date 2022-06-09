@@ -108,5 +108,36 @@ namespace DAL.ParticipationBranch
 
             return participationDetails;
         }
+
+        public List<List<string>> GetParticipantsNameByTournament(int tournamentid) 
+        {
+            string query = "SELECT p.participationId, u.userId, u.firstName, u.lastName " +
+                "FROM sa_participations p " +
+                "INNER JOIN sa_users u ON u.userId = p.playerId " +
+                "WHERE tournamentId = @tournamentid";
+
+            List<KeyValuePair<string, dynamic>> parameters = new List<KeyValuePair<string, dynamic>>
+            {
+                new KeyValuePair<string, dynamic>("tournamentid", tournamentid)
+            };
+
+            DataSet data = ExecuteSql(query, parameters);
+
+            List<List<string>> userDetails = new List<List<string>>();
+
+            for (int row = 0; row < data.Tables[0].Rows.Count; row++)
+            {
+                string participationId = data.Tables[0].Rows[row]["participationId"].ToString();
+                string userId = data.Tables[0].Rows[row]["userId"].ToString();
+
+                string firstName = data.Tables[0].Rows[row]["firstName"].ToString();
+                string lastName = data.Tables[0].Rows[row]["lastName"].ToString();
+
+                List<string> list = new List<string> { participationId, userId, firstName, lastName };
+                userDetails.Add(list);
+            }
+
+            return userDetails;
+        }
     }
 }

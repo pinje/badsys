@@ -56,5 +56,70 @@ namespace UnitTest
             // assert
             Assert.AreEqual(expected, 1);
         }
+
+        [TestMethod]
+        public void GetUserIdByEmail_Validate()
+        {
+            // arrange 
+            UserManager um = new UserManager(new MockUserDAL());
+
+            // act
+            int expected = um.GetUserIdByEmail("shuhei@gmail.com");
+
+            // assert
+            Assert.AreEqual(expected, 12);
+        }
+
+        [TestMethod]
+        public void Login_Valid_Validate()
+        {
+            // arrange
+            UserManager um = new UserManager(new MockUserDAL());
+
+            // act
+            bool result = um.Login("ict@gmail.com", "Fontys123#");
+
+            // assert
+            Assert.AreEqual(result, true);
+        }
+
+        [TestMethod]
+        public void Login_WrongEmail_Validate()
+        {
+            // arrange
+            UserManager um = new UserManager(new MockUserDAL());
+
+            // act
+            bool result = um.Login("fontys@gmail.com", "Fontys123#");
+
+            // assert
+            Assert.AreEqual(result, false);
+        }
+
+        [TestMethod]
+        public void Login_WrongPassword_Validate()
+        {
+            // arrange
+            UserManager um = new UserManager(new MockUserDAL());
+
+            // act
+            bool result = um.Login("ict@gmail.com", "ICT123#");
+
+            // assert
+            Assert.AreEqual(result, false);
+        }
+
+        [TestMethod]
+        public void Login_AllWrong_Validate()
+        {
+            // arrange
+            UserManager um = new UserManager(new MockUserDAL());
+
+            // act
+            bool result = um.Login("fontys@gmail.com", "ICT123#");
+
+            // assert
+            Assert.AreEqual(result, false);
+        }
     }
 }

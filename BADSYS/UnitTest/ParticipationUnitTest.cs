@@ -21,7 +21,7 @@ namespace UnitTest
             int expected = list.Count;
 
             // assert
-            Assert.AreEqual(expected, 6);
+            Assert.AreEqual(expected, 36);
         }
 
         [TestMethod]
@@ -36,7 +36,7 @@ namespace UnitTest
             int expected = list.Count;
 
             // assert
-            Assert.AreEqual(expected, 4);
+            Assert.AreEqual(expected, 34);
         }
 
         [TestMethod]
@@ -50,7 +50,7 @@ namespace UnitTest
             int expected = list.Count;
 
             // assert
-            Assert.AreEqual(expected, 5);
+            Assert.AreEqual(expected, 35);
         }
 
         [TestMethod]
@@ -64,7 +64,7 @@ namespace UnitTest
             int expected = list.Count;
 
             // assert
-            Assert.AreEqual(expected, 0);
+            Assert.AreEqual(expected, 8);
         }
 
         [TestMethod]
@@ -106,7 +106,7 @@ namespace UnitTest
             int expected = list.Count;
 
             // assert
-            Assert.AreEqual(expected, 0);
+            Assert.AreEqual(expected, 3);
         }
 
         [TestMethod]
@@ -120,7 +120,7 @@ namespace UnitTest
             int expected = list.Count;
 
             // assert
-            Assert.AreEqual(expected, 2);
+            Assert.AreEqual(expected, 6);
         }
 
         [TestMethod]
@@ -134,7 +134,7 @@ namespace UnitTest
             int expected = list.Count;
 
             // assert
-            Assert.AreEqual(expected, 3);
+            Assert.AreEqual(expected, 7);
         }
 
         [TestMethod]

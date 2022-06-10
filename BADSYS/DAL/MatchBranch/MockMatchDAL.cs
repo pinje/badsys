@@ -11,7 +11,6 @@ namespace DAL.MatchBranch
     public class MockMatchDAL : IMatchDA
     {
         List<Match> matches;
-        List<Participation> participants;
 
         public MockMatchDAL()
         {

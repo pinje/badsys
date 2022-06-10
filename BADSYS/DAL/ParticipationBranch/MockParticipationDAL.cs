@@ -19,8 +19,6 @@ namespace DAL.ParticipationBranch
             participations.Add(new Participation(2, 3));
             participations.Add(new Participation(1, 0));
             participations.Add(new Participation(2, 0));
-            participations.Add(new Participation(1, 0));
-            participations.Add(new Participation(2, 0));
             participations.Add(new Participation(1, 4));
             participations.Add(new Participation(2, 4));
             participations.Add(new Participation(3, 4));

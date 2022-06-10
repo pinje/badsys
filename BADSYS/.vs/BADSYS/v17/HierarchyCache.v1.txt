@@ -1,0 +1,466 @@
+﻿++Solution 'BADSYS' ‎(6 of 6 projects)
+i:{00000000-0000-0000-0000-000000000000}:BADSYS.sln
+++DAL
+i:{00000000-0000-0000-0000-000000000000}:DAL
+i:{433bcd13-1fab-4e1d-b68e-d2b709359ed5}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dal\dal.csproj
+i:{a19b3e7f-0de1-430c-9db5-e2d3cd60142e}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dal\dal.csproj
+++Dependencies
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:>1009
+i:{433bcd13-1fab-4e1d-b68e-d2b709359ed5}:>999
+i:{5c6b2714-2800-479e-a15e-8932940d46e7}:>1010
+i:{a19b3e7f-0de1-430c-9db5-e2d3cd60142e}:>1011
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:>998
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:>1222
+++MatchBranch
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dal\matchbranch\
+++IMatchDA.cs
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dal\matchbranch\imatchda.cs
+++MatchDAL.cs
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dal\matchbranch\matchdal.cs
+++MockMatchDAL.cs
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dal\matchbranch\mockmatchdal.cs
+++ParticipationBranch
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dal\participationbranch\
+++IParticipationDA.cs
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dal\participationbranch\iparticipationda.cs
+++MockParticipationDAL.cs
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dal\participationbranch\mockparticipationdal.cs
+++ParticipationDAL.cs
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dal\participationbranch\participationdal.cs
+++TournamentBranch
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dal\tournamentbranch\
+++ITournamentDA.cs
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dal\tournamentbranch\itournamentda.cs
+++MockTournamentDAL.cs
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dal\tournamentbranch\mocktournamentdal.cs
+++TournamentDAL.cs
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dal\tournamentbranch\tournamentdal.cs
+++UserBranch
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dal\userbranch\
+++IUserDA.cs
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dal\userbranch\iuserda.cs
+++MockUserDAL.cs
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dal\userbranch\mockuserdal.cs
+++UserDAL.cs
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dal\userbranch\userdal.cs
+++DAL.cs
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dal\dal.cs
+++HashSalt.cs
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dal\hashsalt.cs
+++Analyzers
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:analyzers
+i:{433bcd13-1fab-4e1d-b68e-d2b709359ed5}:analyzers
+i:{5c6b2714-2800-479e-a15e-8932940d46e7}:analyzers
+i:{a19b3e7f-0de1-430c-9db5-e2d3cd60142e}:analyzers
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:analyzers
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:analyzers
+++Frameworks
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:frameworks
+i:{433bcd13-1fab-4e1d-b68e-d2b709359ed5}:frameworks
+i:{5c6b2714-2800-479e-a15e-8932940d46e7}:frameworks
+i:{a19b3e7f-0de1-430c-9db5-e2d3cd60142e}:frameworks
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:frameworks
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:frameworks
+++Packages
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:packages
+i:{a19b3e7f-0de1-430c-9db5-e2d3cd60142e}:packages
+++Projects
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:projects
+i:{433bcd13-1fab-4e1d-b68e-d2b709359ed5}:projects
+i:{a19b3e7f-0de1-430c-9db5-e2d3cd60142e}:projects
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:projects
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:projects
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{433bcd13-1fab-4e1d-b68e-d2b709359ed5}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{5c6b2714-2800-479e-a15e-8932940d46e7}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{a19b3e7f-0de1-430c-9db5-e2d3cd60142e}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{433bcd13-1fab-4e1d-b68e-d2b709359ed5}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{5c6b2714-2800-479e-a15e-8932940d46e7}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{a19b3e7f-0de1-430c-9db5-e2d3cd60142e}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++System.Text.Json.SourceGeneration
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{433bcd13-1fab-4e1d-b68e-d2b709359ed5}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{5c6b2714-2800-479e-a15e-8932940d46e7}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{a19b3e7f-0de1-430c-9db5-e2d3cd60142e}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+++Microsoft.NETCore.App
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dal\microsoft.netcore.app
+i:{433bcd13-1fab-4e1d-b68e-d2b709359ed5}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dll\microsoft.netcore.app
+i:{5c6b2714-2800-479e-a15e-8932940d46e7}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\models\microsoft.netcore.app
+i:{a19b3e7f-0de1-430c-9db5-e2d3cd60142e}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\unittest\microsoft.netcore.app
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\microsoft.netcore.app
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\microsoft.netcore.app
+++MySql.Data (8.0.29)
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:>1236
+++Models
+i:{a16f2ad1-af66-4cbb-960a-2f2215e7bdab}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\models\models.csproj
+i:{433bcd13-1fab-4e1d-b68e-d2b709359ed5}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\models\models.csproj
+i:{00000000-0000-0000-0000-000000000000}:Models
+i:{a19b3e7f-0de1-430c-9db5-e2d3cd60142e}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\models\models.csproj
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\models\models.csproj
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\models\models.csproj
+++DLL
+i:{00000000-0000-0000-0000-000000000000}:DLL
+i:{a19b3e7f-0de1-430c-9db5-e2d3cd60142e}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dll\dll.csproj
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dll\dll.csproj
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dll\dll.csproj
+++MatchManager.cs
+i:{433bcd13-1fab-4e1d-b68e-d2b709359ed5}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dll\matchmanager.cs
+++ParticipationManager.cs
+i:{433bcd13-1fab-4e1d-b68e-d2b709359ed5}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dll\participationmanager.cs
+++TournamentManager.cs
+i:{433bcd13-1fab-4e1d-b68e-d2b709359ed5}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dll\tournamentmanager.cs
+++UserManager.cs
+i:{433bcd13-1fab-4e1d-b68e-d2b709359ed5}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\dll\usermanager.cs
+++Match.cs
+i:{5c6b2714-2800-479e-a15e-8932940d46e7}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\models\match.cs
+++MatchStatus.cs
+i:{5c6b2714-2800-479e-a15e-8932940d46e7}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\models\matchstatus.cs
+++Participation.cs
+i:{5c6b2714-2800-479e-a15e-8932940d46e7}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\models\participation.cs
+++Tournament.cs
+i:{5c6b2714-2800-479e-a15e-8932940d46e7}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\models\tournament.cs
+++TournamentStatus.cs
+i:{5c6b2714-2800-479e-a15e-8932940d46e7}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\models\tournamentstatus.cs
+++TournamentSystem.cs
+i:{5c6b2714-2800-479e-a15e-8932940d46e7}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\models\tournamentsystem.cs
+++User.cs
+i:{5c6b2714-2800-479e-a15e-8932940d46e7}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\models\user.cs
+++UnitTest
+i:{00000000-0000-0000-0000-000000000000}:UnitTest
+++MatchUnitTest.cs
+i:{a19b3e7f-0de1-430c-9db5-e2d3cd60142e}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\unittest\matchunittest.cs
+++ParticipationUnitTest.cs
+i:{a19b3e7f-0de1-430c-9db5-e2d3cd60142e}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\unittest\participationunittest.cs
+++TournamentUnitTest.cs
+i:{a19b3e7f-0de1-430c-9db5-e2d3cd60142e}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\unittest\tournamentunittest.cs
+++UserUnitTest.cs
+i:{a19b3e7f-0de1-430c-9db5-e2d3cd60142e}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\unittest\userunittest.cs
+++coverlet.collector (3.1.0)
+i:{a19b3e7f-0de1-430c-9db5-e2d3cd60142e}:>1261
+++Microsoft.NET.Test.Sdk (16.11.0)
+i:{a19b3e7f-0de1-430c-9db5-e2d3cd60142e}:>1260
+++MSTest.TestAdapter (2.2.7)
+i:{a19b3e7f-0de1-430c-9db5-e2d3cd60142e}:>1262
+++MSTest.TestFramework (2.2.7)
+i:{a19b3e7f-0de1-430c-9db5-e2d3cd60142e}:>1258
+++WindowsForms
+i:{00000000-0000-0000-0000-000000000000}:WindowsForms
+++Properties
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\properties\
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\properties\
+++Resources
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\resources\
+++EditMatch.cs
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\editmatch.cs
+++EditTournament.cs
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\edittournament.cs
+++Main.cs
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\main.cs
+++MatchesForm.cs
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\matchesform.cs
+++Program.cs
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\program.cs
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\program.cs
+++TournamentsForm.cs
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\tournamentsform.cs
+++ValidateThis.cs
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\validatethis.cs
+++WaitForm.cs
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\waitform.cs
+++Resources.resx
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\properties\resources.resx
+++badsys.png
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\resources\badsys.png
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\image\badsys.png
+++EditMatch.Designer.cs
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\editmatch.designer.cs
+++EditMatch.resx
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\editmatch.resx
+++EditTournament.Designer.cs
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\edittournament.designer.cs
+++EditTournament.resx
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\edittournament.resx
+++Main.Designer.cs
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\main.designer.cs
+++Main.resx
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\main.resx
+++MatchesForm.Designer.cs
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\matchesform.designer.cs
+++MatchesForm.resx
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\matchesform.resx
+++TournamentsForm.Designer.cs
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\tournamentsform.designer.cs
+++TournamentsForm.resx
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\tournamentsform.resx
+++WaitForm.Designer.cs
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\waitform.designer.cs
+++WaitForm.resx
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\waitform.resx
+++System.Windows.Forms.Analyzers
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\program files\dotnet\packs\microsoft.windowsdesktop.app.ref\6.0.3\analyzers\dotnet\system.windows.forms.analyzers.dll
+++System.Windows.Forms.Analyzers.CSharp
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\program files\dotnet\packs\microsoft.windowsdesktop.app.ref\6.0.3\analyzers\dotnet\cs\system.windows.forms.analyzers.csharp.dll
+++Microsoft.WindowsDesktop.App.WindowsForms
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\microsoft.windowsdesktop.app.windowsforms
+++Resources.Designer.cs
+i:{b224cb64-bc47-42a1-beeb-e04225f906d1}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\windowsforms\properties\resources.designer.cs
+++BADSYS
+i:{00000000-0000-0000-0000-000000000000}:BADSYS
+++Connected Services 
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:>1223
+++wwwroot
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\
+++css
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\css\
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\
+++site.css
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\css\site.css
+++style.css
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\css\style.css
+++image
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\image\
+++js
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\js\
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\js\
+++lib
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\
+++favicon.ico
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\favicon.ico
+++Pages
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\
+++Confirmation
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\confirmation\
+++Deregistration.cshtml
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\confirmation\deregistration.cshtml
+++Deregistration.cshtml.cs
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\confirmation\deregistration.cshtml.cs
+++Registration.cshtml
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\confirmation\registration.cshtml
+++Registration.cshtml.cs
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\confirmation\registration.cshtml.cs
+++Shared
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\shared\
+++_Layout.cshtml
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\shared\_layout.cshtml
+++_LoginLayout.cshtml
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\shared\_loginlayout.cshtml
+++_ValidationScriptsPartial.cshtml
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\shared\_validationscriptspartial.cshtml
+++ViewModels
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\viewmodels\
+++_ViewImports.cshtml
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\_viewimports.cshtml
+++_ViewStart.cshtml
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\_viewstart.cshtml
+++Error.cshtml
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\error.cshtml
+++Index.cshtml
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\index.cshtml
+++Login.cshtml
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\login.cshtml
+++Login.cshtml.cs
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\login.cshtml.cs
+++Logout.cshtml
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\logout.cshtml
+++Logout.cshtml.cs
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\logout.cshtml.cs
+++Privacy.cshtml
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\privacy.cshtml
+++Profile.cshtml
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\profile.cshtml
+++Profile.cshtml.cs
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\profile.cshtml.cs
+++Register.cshtml
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\register.cshtml
+++Register.cshtml.cs
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\register.cshtml.cs
+++Tournament.cshtml
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\tournament.cshtml
+++Tournament.cshtml.cs
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\tournament.cshtml.cs
+++Tournaments.cshtml
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\tournaments.cshtml
+++Tournaments.cshtml.cs
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\tournaments.cshtml.cs
+++appsettings.json
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\appsettings.json
+++Startup.cs
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\startup.cs
+++No service dependencies discovered
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:>1224
+++launchSettings.json
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\properties\launchsettings.json
+++arrow.png
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\image\arrow.png
+++site.js
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\js\site.js
+++bootstrap
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\
+++jquery
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\jquery\
+++jquery-validation
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\jquery-validation\
+++jquery-validation-unobtrusive
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\jquery-validation-unobtrusive\
+++_Layout.cshtml.css
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\shared\_layout.cshtml.css
+++LoginUserViewModel.cs
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\viewmodels\loginuserviewmodel.cs
+++RegisterUserViewModel.cs
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\viewmodels\registeruserviewmodel.cs
+++Error.cshtml.cs
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\error.cshtml.cs
+++Index.cshtml.cs
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\index.cshtml.cs
+++Privacy.cshtml.cs
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\pages\privacy.cshtml.cs
+++appsettings.Development.json
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\appsettings.development.json
+++Microsoft.AspNetCore.Analyzers
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.App.Analyzers
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+++Microsoft.AspNetCore.App.CodeFixes
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.Razor.SourceGenerator.Tooling.Internal
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.sourcegenerator.tooling.internal.dll
+++Microsoft.Extensions.Logging.Generators
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++Microsoft.NET.Sdk.Razor.SourceGenerators
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+++Microsoft.AspNetCore.App
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\microsoft.aspnetcore.app
+++dist
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\jquery\dist\
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\jquery-validation\dist\
+++LICENSE
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\license
+++LICENSE.txt
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\jquery\license.txt
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\jquery-validation-unobtrusive\license.txt
+++LICENSE.md
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\jquery-validation\license.md
+++jquery.validate.unobtrusive.js
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
+++jquery.js
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\jquery\dist\jquery.js
+++additional-methods.js
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\jquery-validation\dist\additional-methods.js
+++jquery.validate.js
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+++jquery.validate.unobtrusive.min.js
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+++bootstrap.css
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+++bootstrap-grid.css
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+++bootstrap-reboot.css
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+++bootstrap-utilities.css
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+++bootstrap.js
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+++jquery.min.js
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\jquery\dist\jquery.min.js
+++additional-methods.min.js
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+++jquery.validate.min.js
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+++bootstrap.css.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+++bootstrap.min.css
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+++bootstrap.rtl.css
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+++bootstrap-grid.css.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+++bootstrap-grid.min.css
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+++bootstrap-grid.rtl.css
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+++bootstrap-reboot.css.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+++bootstrap-reboot.min.css
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+++bootstrap-reboot.rtl.css
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+++bootstrap-utilities.css.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+++bootstrap-utilities.min.css
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+++bootstrap-utilities.rtl.css
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+++bootstrap.bundle.js
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+++bootstrap.esm.js
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+++bootstrap.js.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+++bootstrap.min.js
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+++jquery.min.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\jquery\dist\jquery.min.map
+++bootstrap.min.css.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+++bootstrap.rtl.css.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+++bootstrap.rtl.min.css
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+++bootstrap-grid.min.css.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+++bootstrap-grid.rtl.css.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+++bootstrap-grid.rtl.min.css
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+++bootstrap-reboot.min.css.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+++bootstrap-reboot.rtl.css.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+++bootstrap-reboot.rtl.min.css
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+++bootstrap-utilities.min.css.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+++bootstrap-utilities.rtl.css.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+++bootstrap-utilities.rtl.min.css
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+++bootstrap.bundle.js.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+++bootstrap.bundle.min.js
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+++bootstrap.esm.js.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+++bootstrap.esm.min.js
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+++bootstrap.min.js.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+++bootstrap.rtl.min.css.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+++bootstrap-grid.rtl.min.css.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+++bootstrap-reboot.rtl.min.css.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+++bootstrap-utilities.rtl.min.css.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+++bootstrap.bundle.min.js.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+++bootstrap.esm.min.js.map
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+++PublishProfiles
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\properties\publishprofiles\
+++FolderProfile.pubxml
+i:{f4bfefcd-f208-43b3-9de0-52abae9b71f9}:c:\users\shuhei\documents\s2-cb01\synthesis assignment\badsys\badsys\badsys\properties\publishprofiles\folderprofile.pubxml

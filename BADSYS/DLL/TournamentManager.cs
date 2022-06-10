@@ -71,8 +71,7 @@ namespace DLL
                             roundfor += matchItem.PlayerOneScore;
                             roundagainst += matchItem.PlayerTwoScore;
                         }
-                    }
-                    else
+                    } else if (matchItem.PlayerTwo == participant)
                     {
                         if (matchItem.PlayerTwoScore > matchItem.PlayerOneScore)
                         {
@@ -88,6 +87,9 @@ namespace DLL
                             roundfor += matchItem.PlayerTwoScore;
                             roundagainst += matchItem.PlayerOneScore;
                         }
+                    } else
+                    {
+                        // not in the match
                     }
                 }
                 ranking.Add(new List<int> { participant, win, lost, roundfor, roundagainst });

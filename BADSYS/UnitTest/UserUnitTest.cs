@@ -28,38 +28,6 @@ namespace UnitTest
         }
 
         [TestMethod]
-        public void UpdateUser_Validate()
-        {
-            // arrange 
-            UserManager um = new UserManager(new MockUserDAL());
-
-            // act
-            um.UpdateUser(0, new User("test", "hagiwara", "shuhei@gmail.com", "test.jpg"));
-            User expected = um.GetUser(0);
-
-            // assert
-            Assert.AreEqual(expected.FirstName, "test");
-            Assert.AreEqual(expected.LastName, "hagiwara");
-            Assert.AreEqual(expected.Email, "shuhei@gmail.com");
-            Assert.AreEqual(expected.PhotoPath, "test.jpg");
-        }
-
-        [TestMethod]
-        public void DeleteUser_Validate()
-        {
-            // arrange 
-            UserManager um = new UserManager(new MockUserDAL());
-
-            // act
-            um.DeleteUser(0);
-            List<User> list = um.GetAllUsers();
-            int expected = list.Count;
-
-            // assert
-            Assert.AreEqual(expected, 0);
-        }
-
-        [TestMethod]
         public void GetAllUsers_Validate()
         {
             // arrange 

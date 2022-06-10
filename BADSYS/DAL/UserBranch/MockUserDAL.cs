@@ -22,16 +22,6 @@ namespace DAL.UserBranch
             users.Add(user);
         }
 
-        public void UpdateUser(int userId, User newUser)
-        {
-            users[userId] = newUser;
-        }
-
-        public void DeleteUser(int userId)
-        {
-            users.RemoveAt(userId);
-        }
-
         public User GetUser(int userId)
         {
             return users[userId];

@@ -409,19 +409,19 @@ namespace WindowsForms
         {
             if (system == TournamentSystem.ROUND_ROBIN)
             {
-                matchManager.GenerateRoundRobin(tournamentId);
+                matchManager.GenerateRoundRobin(tournamentId, participationManager.GetAllParticipationByTournament(tournamentId));
                 tournament.Status = TournamentStatus.ONGOING;
                 tournamentManager.UpdateTournament(tournamentId, tournament);
             }
             else if (system == TournamentSystem.SINGLE_ELIMINATION)
             {
-                matchManager.GenerateSingleElimination(tournamentId);
+                matchManager.GenerateSingleElimination(tournamentId, participationManager.GetAllParticipationByTournament(tournamentId));
                 tournament.Status = TournamentStatus.ONGOING;
                 tournamentManager.UpdateTournament(tournamentId, tournament);
             }
             else if (system == TournamentSystem.DOUBLE_ELIMINATION)
             {
-                matchManager.GenerateDoubleElimination(tournamentId);
+                matchManager.GenerateDoubleElimination(tournamentId, participationManager.GetAllParticipationByTournament(tournamentId));
                 tournament.Status = TournamentStatus.ONGOING;
                 tournamentManager.UpdateTournament(tournamentId, tournament);
             }

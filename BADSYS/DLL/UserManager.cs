@@ -23,16 +23,6 @@ namespace DLL
             this.user.AddUser(user, password);
         }
 
-        public void UpdateUser(int userId, User newUser)
-        {
-            this.user.UpdateUser(userId, newUser);
-        }
-
-        public void DeleteUser(int userId)
-        {
-            this.user.DeleteUser(userId);
-        }
-
         public User GetUser(int userId)
         {
             return this.user.GetUser(userId);

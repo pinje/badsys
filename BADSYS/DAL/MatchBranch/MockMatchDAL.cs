@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Models;
+using DAL.ParticipationBranch;
 
 namespace DAL.MatchBranch
 {
     public class MockMatchDAL : IMatchDA
     {
         List<Match> matches;
+        List<Participation> participants;
 
         public MockMatchDAL()
         {
@@ -64,7 +66,17 @@ namespace DAL.MatchBranch
 
         public List<Match> GetAllMatchesByUserId(int userId)
         {
-            throw new NotImplementedException();
+            List<Match> list = new List<Match>();
+
+            foreach (Match match in matches)
+            {
+                if (match.PlayerOne == userId || match.PlayerTwo == userId) 
+                {
+                    list.Add(match);
+                }
+            }
+
+            return list;
         }
     }
 }

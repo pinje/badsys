@@ -21,7 +21,7 @@ namespace UnitTest
             int expected = list.Count;
 
             // assert
-            Assert.AreEqual(expected, 4);
+            Assert.AreEqual(expected, 6);
         }
 
         [TestMethod]
@@ -36,7 +36,7 @@ namespace UnitTest
             int expected = list.Count;
 
             // assert
-            Assert.AreEqual(expected, 2);
+            Assert.AreEqual(expected, 4);
         }
 
         [TestMethod]
@@ -50,7 +50,7 @@ namespace UnitTest
             int expected = list.Count;
 
             // assert
-            Assert.AreEqual(expected, 3);
+            Assert.AreEqual(expected, 5);
         }
 
         [TestMethod]
@@ -120,7 +120,7 @@ namespace UnitTest
             int expected = list.Count;
 
             // assert
-            Assert.AreEqual(expected, 1);
+            Assert.AreEqual(expected, 2);
         }
 
         [TestMethod]
@@ -131,6 +131,20 @@ namespace UnitTest
 
             // act
             List<Participation> list = pm.GetAllParticipationByPlayer(2);
+            int expected = list.Count;
+
+            // assert
+            Assert.AreEqual(expected, 3);
+        }
+
+        [TestMethod]
+        public void GetParticipantsNameByTournament_Validate()
+        {
+            // arrange 
+            ParticipationManager pm = new ParticipationManager(new MockParticipationDAL());
+
+            // act
+            List<List<string>> list = pm.GetParticipantsNameByTournament(2);
             int expected = list.Count;
 
             // assert

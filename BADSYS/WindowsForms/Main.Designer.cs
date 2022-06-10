@@ -85,7 +85,7 @@
             this.Controls.Add(this.button_matchpage);
             this.Controls.Add(this.button_tournamentpage);
             this.Name = "Main";
-            this.Text = "Form1";
+            this.Text = "BADSYS";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

@@ -14,7 +14,7 @@ namespace DAL.TournamentBranch
         public MockTournamentDAL()
         {
             tournaments = new List<Tournament>();
-            tournaments.Add(new Tournament(0, "this is a tournament", Convert.ToDateTime("05/05/2022"), 
+            tournaments.Add(new Tournament(0, "this is a tournament", Convert.ToDateTime("05/05/2022"),
                 Convert.ToDateTime("05/05/2022"), 4, 12, "address", TournamentSystem.ROUND_ROBIN, TournamentStatus.UPCOMING));
         }
 

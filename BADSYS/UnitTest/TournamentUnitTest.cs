@@ -1,6 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DLL;
 using DAL.TournamentBranch;
+using DAL.ParticipationBranch;
+using DAL.MatchBranch;
 using Models;
 using System.Collections.Generic;
 using System;
@@ -108,6 +110,40 @@ namespace UnitTest
             Assert.AreEqual(expected[0].Address, "address");
             Assert.AreEqual(expected[0].System, TournamentSystem.ROUND_ROBIN);
             Assert.AreEqual(expected[0].Status, TournamentStatus.UPCOMING);
+        }
+
+        [TestMethod]
+        public void Ranking_Validate()
+        {
+            // arrange
+            TournamentManager tm = new TournamentManager(new MockTournamentDAL());
+            MatchManager mm = new MatchManager(new MockMatchDAL());
+            ParticipationManager pm = new ParticipationManager(new MockParticipationDAL());
+
+            List<Match> matches = mm.GetAllMatchesByTournamentId(0);
+            List<Participation> participants = pm.GetAllParticipationByTournament(0);
+            List<int> participantsId = new List<int>();
+
+            foreach (Participation participant in participants)
+            {
+                participantsId.Add(participant.PlayerId);
+            }
+
+            // act
+            List<List<int>> expected = tm.Ranking(matches, participantsId);
+
+            // assert
+            Assert.AreEqual(expected[0][0], 1);
+            Assert.AreEqual(expected[0][1], 1);
+            Assert.AreEqual(expected[0][2], 0);
+            Assert.AreEqual(expected[0][3], 22);
+            Assert.AreEqual(expected[0][4], 19);
+
+            Assert.AreEqual(expected[1][0], 2);
+            Assert.AreEqual(expected[1][1], 0);
+            Assert.AreEqual(expected[1][2], 1);
+            Assert.AreEqual(expected[1][3], 19);
+            Assert.AreEqual(expected[1][4], 22);
         }
     }
 }

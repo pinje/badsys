@@ -29,16 +29,6 @@ namespace DAL.UserBranch
 
             ExecuteInsert(sql, parameters);
         }
-
-        public void UpdateUser(int userId, User newUser)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DeleteUser(int userId)
-        {
-            throw new NotImplementedException();
-        }
         
         public User GetUser(int userId)
         {

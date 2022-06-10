@@ -17,6 +17,44 @@ namespace DAL.ParticipationBranch
             participations.Add(new Participation(1, 2));
             participations.Add(new Participation(2, 2));
             participations.Add(new Participation(2, 3));
+            participations.Add(new Participation(1, 0));
+            participations.Add(new Participation(2, 0));
+            participations.Add(new Participation(1, 0));
+            participations.Add(new Participation(2, 0));
+            participations.Add(new Participation(1, 4));
+            participations.Add(new Participation(2, 4));
+            participations.Add(new Participation(3, 4));
+            participations.Add(new Participation(4, 4));
+            participations.Add(new Participation(5, 4));
+            participations.Add(new Participation(6, 4));
+            participations.Add(new Participation(7, 4));
+            participations.Add(new Participation(8, 4));
+
+            participations.Add(new Participation(1, 5));
+            participations.Add(new Participation(2, 5));
+            participations.Add(new Participation(3, 5));
+            participations.Add(new Participation(4, 5));
+            participations.Add(new Participation(5, 5));
+            participations.Add(new Participation(6, 5));
+            participations.Add(new Participation(7, 5));
+            participations.Add(new Participation(8, 5));
+            participations.Add(new Participation(9, 5));
+            participations.Add(new Participation(10, 5));
+            participations.Add(new Participation(11, 5));
+            participations.Add(new Participation(12, 5));
+            participations.Add(new Participation(13, 5));
+            participations.Add(new Participation(14, 5));
+            participations.Add(new Participation(15, 5));
+            participations.Add(new Participation(16, 5));
+
+            participations.Add(new Participation(1, 6));
+            participations.Add(new Participation(2, 6));
+
+            participations.Add(new Participation(1, 7));
+            participations.Add(new Participation(2, 7));
+            participations.Add(new Participation(3, 7));
+            participations.Add(new Participation(4, 7));
+
         }
 
         public void AddParticipation(Participation participation)
@@ -65,7 +103,17 @@ namespace DAL.ParticipationBranch
 
         public List<List<string>> GetParticipantsNameByTournament(int tournamentid)
         {
-            throw new NotImplementedException();
+            List<List<string>> filteredList = new List<List<string>>();
+
+            foreach (Participation item in participations)
+            {
+                if (item.TournamentId == tournamentid)
+                {
+                    filteredList.Add(new List<string> { item.Id.ToString(), item.PlayerId.ToString()});
+                }
+            }
+
+            return filteredList;
         }
 
     }

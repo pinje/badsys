@@ -12,12 +12,9 @@ namespace DLL
     public class MatchManager
     {
         IMatchDA match;
-        ParticipationManager participationManager;
         public MatchManager(IMatchDA match)
         {
             this.match = match;
-            participationManager = new ParticipationManager(new ParticipationDAL());
-
         }
 
         public void AddMatch(Match match)
@@ -50,10 +47,10 @@ namespace DLL
             return this.match.GetAllMatchesByUserId(userId);
         }
 
-        public void GenerateRoundRobin(int tournamentId)
+        public void GenerateRoundRobin(int tournamentId, List<Participation> participants)
         {
             // get participants
-            List<Participation> list = participationManager.GetAllParticipationByTournament(tournamentId);
+            List<Participation> list = participants;
 
             // convert participants id to string
             List<string> teamsList = new List<string>();
@@ -96,23 +93,17 @@ namespace DLL
             }
         }
 
-        public void GenerateSingleElimination(int tournamentId)
+        public void GenerateSingleElimination(int tournamentId, List<Participation> participants)
         {
             // get participants
-            ParticipationManager participationManager = new ParticipationManager(new ParticipationDAL());
-            List<Participation> list = participationManager.GetAllParticipationByTournament(tournamentId);
+            List<Participation> list = participants;
 
             // convert participants to string 
+
             List<string> teamsList = new List<string>();
             foreach (Participation participation in list)
             {
                 teamsList.Add(participation.PlayerId.ToString());
-            }
-
-            // add a "bye" team if even number of teams
-            if (teamsList.Count % 2 != 0)
-            {
-                teamsList.Add("0");
             }
 
             // get number of participants
@@ -129,70 +120,82 @@ namespace DLL
                 AddMatch(new Match(tournamentId, Convert.ToInt16(teamsList[0]), Convert.ToInt16(teamsList[1]), 0, 0, 0, "Final"));
             } else if (numberOfParticipants == 4) // special case for 4 participants
             {
-                AddMatch(new Match(tournamentId, Convert.ToInt16(teamsList[0]), Convert.ToInt16(teamsList[1]), 0, 0, 0, "Semifinals"));
-                AddMatch(new Match(tournamentId, Convert.ToInt16(teamsList[2]), Convert.ToInt16(teamsList[3]), 0, 0, 0, "Semifinals"));
-                AddMatch(new Match(tournamentId, Convert.ToInt16(null), Convert.ToInt16(null), 0, 0, 0, "Final"));
+                GenerateSingleEliminationForFour(tournamentId, teamsList);
             } else if (numberOfParticipants == 8) // special case for 8 participants
             {
-                AddMatch(new Match(tournamentId, Convert.ToInt16(teamsList[0]), Convert.ToInt16(teamsList[1]), 0, 0, 0, "Quarterfinals"));
-                AddMatch(new Match(tournamentId, Convert.ToInt16(teamsList[2]), Convert.ToInt16(teamsList[3]), 0, 0, 0, "Quarterfinals"));
-                AddMatch(new Match(tournamentId, Convert.ToInt16(teamsList[4]), Convert.ToInt16(teamsList[5]), 0, 0, 0, "Quarterfinals"));
-                AddMatch(new Match(tournamentId, Convert.ToInt16(teamsList[6]), Convert.ToInt16(teamsList[7]), 0, 0, 0, "Quarterfinals"));
-                AddMatch(new Match(tournamentId, Convert.ToInt16(null), Convert.ToInt16(null), 0, 0, 0, "Semifinals"));
-                AddMatch(new Match(tournamentId, Convert.ToInt16(null), Convert.ToInt16(null), 0, 0, 0, "Semifinals"));
-                AddMatch(new Match(tournamentId, Convert.ToInt16(null), Convert.ToInt16(null), 0, 0, 0, "Final"));
+                GenerateSingleEliminationForEight(tournamentId, teamsList);
             } else
             {
-                for (int round = 1; round < numberOfRounds+1; round++)
+                GenerateSingleEliminationForAboveEight(tournamentId, teamsList, numberOfRounds, numberOfParticipants, bracketNumber);
+            }
+        }
+
+        public void GenerateSingleEliminationForEight(int tournamentId, List<string> teamsList)
+        {
+            int counter = 0;
+            for (int i = 0; i < 4; i++)
+            {
+                AddMatch(new Match(tournamentId, Convert.ToInt16(teamsList[counter]), Convert.ToInt16(teamsList[counter+1]), 0, 0, 0, "Quarterfinals"));
+                counter += 2;
+            }
+            AddMatch(new Match(tournamentId, Convert.ToInt16(null), Convert.ToInt16(null), 0, 0, 0, "Semifinals"));
+            AddMatch(new Match(tournamentId, Convert.ToInt16(null), Convert.ToInt16(null), 0, 0, 0, "Semifinals"));
+            AddMatch(new Match(tournamentId, Convert.ToInt16(null), Convert.ToInt16(null), 0, 0, 0, "Final"));
+        }
+
+        public void GenerateSingleEliminationForFour(int tournamentId, List<string> teamsList)
+        {
+            AddMatch(new Match(tournamentId, Convert.ToInt16(teamsList[0]), Convert.ToInt16(teamsList[1]), 0, 0, 0, "Semifinals"));
+            AddMatch(new Match(tournamentId, Convert.ToInt16(teamsList[2]), Convert.ToInt16(teamsList[3]), 0, 0, 0, "Semifinals"));
+            AddMatch(new Match(tournamentId, Convert.ToInt16(null), Convert.ToInt16(null), 0, 0, 0, "Final"));
+        }
+
+        public void GenerateEmptyQuaterFinalForEight(int tournamentId)
+        {
+            for (int i = 0; i < (8/2); i++)
+            {
+                AddMatch(new Match(tournamentId, Convert.ToInt16(null), Convert.ToInt16(null), 0, 0, 0, "Quarterfinals"));
+            }
+        }
+
+        public void GenerateSingleEliminationForAboveEight(int tournamentId, List<string> teamsList, int numberOfRounds, int numberOfParticipants, int bracketNumber)
+        {
+            for (int round = 1; round < numberOfRounds + 1; round++)
+            {
+                if (round == numberOfRounds)
                 {
-                    if (round == numberOfRounds)
+                    // final
+                    AddMatch(new Match(tournamentId, Convert.ToInt16(null), Convert.ToInt16(null), 0, 0, 0, "Final"));
+                }
+                else if (round == numberOfRounds - 1)
+                {
+                    // semi final
+                    AddMatch(new Match(tournamentId, Convert.ToInt16(null), Convert.ToInt16(null), 0, 0, 0, "Semifinals"));
+                    AddMatch(new Match(tournamentId, Convert.ToInt16(null), Convert.ToInt16(null), 0, 0, 0, "Semifinals"));
+                }
+                else if (round == numberOfRounds - 2)
+                {
+                    // quarter final
+                    GenerateEmptyQuaterFinalForEight(tournamentId);
+                }
+                else
+                {
+                    for (int participantId = 0; participantId < numberOfParticipants; participantId++)
                     {
-                        // final
-                        AddMatch(new Match(tournamentId, Convert.ToInt16(null), Convert.ToInt16(null), 0, 0, 0, "Final"));
-                    }
-                    else if (round == numberOfRounds - 1)
-                    {
-                        // semi final
-                        AddMatch(new Match(tournamentId, Convert.ToInt16(null), Convert.ToInt16(null), 0, 0, 0, "Semifinals"));
-                        AddMatch(new Match(tournamentId, Convert.ToInt16(null), Convert.ToInt16(null), 0, 0, 0, "Semifinals"));
-                    }
-                    else if (round == numberOfRounds - 2)
-                    {
-                        // quarter final
-                        AddMatch(new Match(tournamentId, Convert.ToInt16(null), Convert.ToInt16(null), 0, 0, 0, "Quarterfinals"));
-                        AddMatch(new Match(tournamentId, Convert.ToInt16(null), Convert.ToInt16(null), 0, 0, 0, "Quarterfinals"));
-                        AddMatch(new Match(tournamentId, Convert.ToInt16(null), Convert.ToInt16(null), 0, 0, 0, "Quarterfinals"));
-                        AddMatch(new Match(tournamentId, Convert.ToInt16(null), Convert.ToInt16(null), 0, 0, 0, "Quarterfinals"));
-                    }
-                    else
-                    {
-                        for (int participantId = 0; participantId < numberOfParticipants; participantId++)
-                        {
-                            AddMatch(new Match(tournamentId, Convert.ToInt16(teamsList[participantId]), Convert.ToInt16(teamsList[participantId+1]), 0, 0, 0, "Round of " + bracketNumber));
-                            participantId++;
-                        }
+                        AddMatch(new Match(tournamentId, Convert.ToInt16(teamsList[participantId]), Convert.ToInt16(teamsList[participantId + 1]), 0, 0, 0, "Round of " + bracketNumber));
+                        participantId++;
                     }
                 }
             }
         }
 
-        public void GenerateDoubleElimination(int tournamentId)
+        public void GenerateDoubleElimination(int tournamentId, List<Participation> participants)
         {
             // same as single elimination
-            GenerateSingleElimination(tournamentId);
-
-            // generate lower bracket
+            GenerateSingleElimination(tournamentId, participants);
 
             // get participants
-            ParticipationManager participationManager = new ParticipationManager(new ParticipationDAL());
-            List<Participation> list = participationManager.GetAllParticipationByTournament(tournamentId);
-
-
-            // add a "bye" team if even number of teams
-            if (list.Count % 2 != 0)
-            {
-                list.Add(new Participation(0, tournamentId));
-            }
+            List<Participation> list = participants;
 
             // get number of participants
             int numberOfParticipants = list.Count;

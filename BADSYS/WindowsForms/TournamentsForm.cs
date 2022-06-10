@@ -25,6 +25,7 @@ namespace WindowsForms
             InitializeComponent();
             comboBox_tournamentSystem.DataSource = Enum.GetValues(typeof(TournamentSystem));
             DisplayUpdate();
+
         }
 
         // add tournament
@@ -73,7 +74,8 @@ namespace WindowsForms
             {
                 // start date is earlier than end date = correct
                 ValidatePlayerNumberInequality(tournament);
-            } else
+            }
+            else
             {
                 // startd date and end date are the same or
                 // start date later than end date = not valid
@@ -88,22 +90,85 @@ namespace WindowsForms
             if (result < 0)
             {
                 // min players is smaller than max players = correct
-                tournamentManager.AddTournament(tournament);
-                Success();
-            } else if (result == 0)
+                ValidatePlayerNumberTournamentSystem(tournament, -1);
+            }
+            else if (result == 0)
             {
                 // min players and max players are the same 
-                // meaning the tournament has a fixed number of players 
-                // like a private tournament
-                MessageBox.Show("Private tournament: Fixed number of players in this tournament.");
-                tournamentManager.AddTournament(tournament);
-                Success();
+                // meaning the tournament has a fixed number of players
+                ValidatePlayerNumberTournamentSystem(tournament, 0);
             }
             else
             {
                 // min players is greater than max players = not valid
                 MessageBox.Show("Error: maximum players must be larger than minimum players.");
             }
+        }
+
+        // single and double elim tournaments needs to have number of players that is a power of 2
+        public void ValidatePlayerNumberTournamentSystem(Tournament tournament, int range)
+        {
+            if (tournament.System == TournamentSystem.ROUND_ROBIN)
+            {
+                // do nothing
+                tournamentManager.AddTournament(tournament);
+                Success();
+            }
+            else if (tournament.System == TournamentSystem.SINGLE_ELIMINATION)
+            {
+                // check if min and max # of players are equal
+                if (range == 0)
+                {
+                    // check if # of players is a power of 2
+                    if (IsPowerOfTwo(tournament.MaxPlayer))
+                    {
+                        // ok
+                        tournamentManager.AddTournament(tournament);
+                        Success();
+                    }
+                    else
+                    {
+                        // not ok
+                        MessageBox.Show("Error: Number of Participants must be a power of 2 for Single Elimination Tournaments.");
+                    }
+                }
+                else
+                {
+                    // min and max # of players must be the same for single elim tournament
+                    MessageBox.Show("Error: minimum and maximum number of players must be the same for Single Elimination Tournaments.");
+                }
+            }
+            else
+            {
+                // check if min and max # of players are equal
+                if (range == 0)
+                {
+                    // check if # of players is a power of 2
+                    if (IsPowerOfTwo(tournament.MaxPlayer))
+                    {
+                        // ok
+                        tournamentManager.AddTournament(tournament);
+                        Success();
+                    }
+                    else
+                    {
+                        // not ok
+                        MessageBox.Show("Error: Number of Participants must be a power of 2 for Single Elimination Tournaments.");
+                    }
+                }
+                else
+                {
+                    // min and max # of players must be the same for single elim tournament
+                    MessageBox.Show("Error: minimum and maximum number of players must be the same for Single Elimination Tournaments.");
+                }
+            }
+        }
+
+        private bool IsPowerOfTwo(double number)
+        {
+            double log = Math.Log(number, 2);
+            double pow = Math.Pow(2, Math.Round(log));
+            return pow == number;
         }
 
         public void Success()
@@ -122,8 +187,70 @@ namespace WindowsForms
         // display data to DVG
         public void DisplayUpdate()
         {
+            AutomaticTournamentStartCheck();
             List<Tournament> list = tournamentManager.GetAllTournaments();
             mainDVG.DataSource = list;
+        }
+
+        // check current date and start tournament if date matches
+        public void AutomaticTournamentStartCheck()
+        {
+            DateTime currentDate = DateTime.Now;
+            List<Tournament> list = tournamentManager.GetAllTournaments();
+            foreach (Tournament tournament in list)
+            {
+                if (tournament.Status == TournamentStatus.UPCOMING)
+                {
+                    int result = DateTime.Compare(currentDate, tournament.StartDate);
+                    if (result < 0)
+                    {
+                        // current date is earlier than start date 
+                        // dont start tournament
+                    }
+                    else if (result == 0)
+                    {
+                        if (CheckParticipants(tournament))
+                        {
+                            // start tournament
+                            StartTournament(tournament.System, tournament.Id, tournament);
+                        }
+                        else
+                        {
+                            CancelTournament(tournament.Id, tournament);
+                        }
+                    }
+                    else
+                    {
+                        if (CheckParticipants(tournament))
+                        {
+                            // start tournament
+                            StartTournament(tournament.System, tournament.Id, tournament);
+                        } else
+                        {
+                            CancelTournament(tournament.Id, tournament);
+                        }
+                    }
+                }
+                else if (tournament.Status == TournamentStatus.ONGOING)
+                {
+                    int result = DateTime.Compare(currentDate, tournament.EndDate);
+                    if (result < 0)
+                    {
+                        // current date is earlier than end date 
+                        // dont stop tournament
+                    }
+                    else if (result == 0)
+                    {
+                        // end tournament
+                        EndTournament(tournament.Id, tournament);
+                    }
+                    else
+                    {
+                        // end tournament
+                        EndTournament(tournament.Id, tournament);
+                    }
+                }
+            }
         }
 
         // empty text boxes after adding an employee (e.g. new entry)
@@ -235,14 +362,16 @@ namespace WindowsForms
                 {
                     // not allowed
                     MessageBox.Show("Not allowed to force start because the tournament status is on: " + status);
-                } else
+                }
+                else
                 {
                     // if tournament is allowed to start, check number of participants
-                    if (CheckParticipants(tournamentId))
+                    if (CheckParticipants(tournament))
                     {
                         // if enough players, ok
                         StartTournament(system, tournamentId, tournament);
-                    } else
+                    }
+                    else
                     {
                         // if not enough, not allowed
                         MessageBox.Show("Not allowed to force start because not enough participants.");
@@ -255,15 +384,22 @@ namespace WindowsForms
             }
         }
 
-        // check number of participants in tournament
-        private bool CheckParticipants(int tournamentId)
+        private bool CheckParticipants(Tournament tournament)
         {
-            List<Participation> participants = participationManager.GetAllParticipationByTournament(tournamentId);
-            if (participants.Count > 0)
+            // get participants
+            ParticipationManager participationManager = new ParticipationManager(new ParticipationDAL());
+            List<Participation> list = participationManager.GetAllParticipationByTournament(tournament.Id);
+            int numberOfParticipants = list.Count();
+
+            // compare 
+            if (numberOfParticipants >= tournament.MinPlayer)
             {
+                // allow start of tournament
                 return true;
-            } else
+            }
+            else
             {
+                // cancel tournament
                 return false;
             }
         }
@@ -282,17 +418,30 @@ namespace WindowsForms
                 matchManager.GenerateSingleElimination(tournamentId);
                 tournament.Status = TournamentStatus.ONGOING;
                 tournamentManager.UpdateTournament(tournamentId, tournament);
-            } // IMPLEMENT DOUBLE ELIM
+            }
+            else if (system == TournamentSystem.DOUBLE_ELIMINATION)
+            {
+                matchManager.GenerateDoubleElimination(tournamentId);
+                tournament.Status = TournamentStatus.ONGOING;
+                tournamentManager.UpdateTournament(tournamentId, tournament);
+            }
             else
             {
                 //do nothing
             }
+        }
 
-            // confirmation message
-            MessageBox.Show("Tournament started succesfully.");
+        // end tournament
+        private void EndTournament(int tournamentId, Tournament tournament)
+        {
+            tournament.Status = TournamentStatus.FINISHED;
+            tournamentManager.UpdateTournament(tournamentId, tournament);
+        }
 
-            // update DVGs
-            DisplayUpdate();
+        private void CancelTournament(int tournamentId, Tournament tournament)
+        {
+            tournament.Status = TournamentStatus.CANCELED;
+            tournamentManager.UpdateTournament(tournamentId, tournament);
         }
     }
 }

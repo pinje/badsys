@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button_forcestart = new System.Windows.Forms.Button();
             this.button_delete = new System.Windows.Forms.Button();
             this.button_edit = new System.Windows.Forms.Button();
             this.mainDVG = new System.Windows.Forms.DataGridView();
@@ -50,7 +51,6 @@
             this.dateTimePicker_tournamentStart = new System.Windows.Forms.DateTimePicker();
             this.textBox_tournamentname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button_forcestart = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainDVG)).BeginInit();
@@ -83,6 +83,17 @@
             this.tabPage1.Text = "Tournaments Overview";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button_forcestart
+            // 
+            this.button_forcestart.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_forcestart.Location = new System.Drawing.Point(846, 167);
+            this.button_forcestart.Name = "button_forcestart";
+            this.button_forcestart.Size = new System.Drawing.Size(95, 35);
+            this.button_forcestart.TabIndex = 3;
+            this.button_forcestart.Text = "Force Start";
+            this.button_forcestart.UseVisualStyleBackColor = true;
+            this.button_forcestart.Click += new System.EventHandler(this.button_forcestart_Click);
+            // 
             // button_delete
             // 
             this.button_delete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -92,6 +103,7 @@
             this.button_delete.TabIndex = 2;
             this.button_delete.Text = "Delete";
             this.button_delete.UseVisualStyleBackColor = true;
+            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
             // 
             // button_edit
             // 
@@ -280,17 +292,6 @@
             this.label1.Size = new System.Drawing.Size(177, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tournament Name / Description";
-            // 
-            // button_forcestart
-            // 
-            this.button_forcestart.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_forcestart.Location = new System.Drawing.Point(846, 167);
-            this.button_forcestart.Name = "button_forcestart";
-            this.button_forcestart.Size = new System.Drawing.Size(95, 35);
-            this.button_forcestart.TabIndex = 3;
-            this.button_forcestart.Text = "Force Start";
-            this.button_forcestart.UseVisualStyleBackColor = true;
-            this.button_forcestart.Click += new System.EventHandler(this.button_forcestart_Click);
             // 
             // TournamentsForm
             // 

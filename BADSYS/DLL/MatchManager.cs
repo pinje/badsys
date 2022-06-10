@@ -178,7 +178,34 @@ namespace DLL
 
         public void GenerateDoubleElimination(int tournamentId)
         {
+            // same as single elimination
+            GenerateSingleElimination(tournamentId);
 
+            // generate lower bracket
+
+            // get participants
+            ParticipationManager participationManager = new ParticipationManager(new ParticipationDAL());
+            List<Participation> list = participationManager.GetAllParticipationByTournament(tournamentId);
+
+
+            // add a "bye" team if even number of teams
+            if (list.Count % 2 != 0)
+            {
+                list.Add(new Participation(0, tournamentId));
+            }
+
+            // get number of participants
+            int numberOfParticipants = list.Count;
+
+            // get number of matches in lower bracket
+            int totalNumberOfMatches = (numberOfParticipants * 2) - 2;
+            int lowerBracketNumberOfMatches = totalNumberOfMatches - numberOfParticipants;
+
+            for (int i = 0; i < lowerBracketNumberOfMatches; i++)
+            {
+                AddMatch(new Match(tournamentId, Convert.ToInt16(null), Convert.ToInt16(null), 0, 0, 0, "Lower Bracket Round X Bracket X"));
+            }
+            AddMatch(new Match(tournamentId, Convert.ToInt16(null), Convert.ToInt16(null), 0, 0, 0, "GRAND FINAL"));
         }
     }
 }

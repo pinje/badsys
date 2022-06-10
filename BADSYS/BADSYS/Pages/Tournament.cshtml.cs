@@ -27,6 +27,10 @@ namespace BADSYS.Pages
         public List<List<string>> Participants { get; set; }
         [BindProperty]
         public List<Match> AllMatches { get; set; }
+        [BindProperty]
+        public List<List<string>> AllMatchesInformation { get; set; }
+        [BindProperty]
+        public List<List<string>> Ranking { get; set; }
 
 
         public int userId;
@@ -54,7 +58,8 @@ namespace BADSYS.Pages
             {
                 // allow registration
                 RegistrationAllowed = true;
-            } else
+            }
+            else
             {
                 // registration not allowed
                 RegistrationAllowed = false;
@@ -67,10 +72,12 @@ namespace BADSYS.Pages
             ListOfParticipation = participationManager.GetAllParticipationByTournament(tournamentid);
             NumberOfRegistration = ListOfParticipation.Count();
 
+
+            UserManager userManager = new UserManager(new UserDAL());
+
             // make user dal get userid by email 
             if (User.Identity.Name != null)
             {
-                UserManager userManager = new UserManager(new UserDAL());
                 userId = userManager.GetUserIdByEmail(User.Identity.Name);
             }
 
@@ -90,7 +97,8 @@ namespace BADSYS.Pages
                         IsRegistered = false;
                     }
                 }
-            } else
+            }
+            else
             {
                 IsRegistered = false;
             }
@@ -99,6 +107,53 @@ namespace BADSYS.Pages
             MatchManager matchManager = new MatchManager(new MatchDAL());
             AllMatches = matchManager.GetAllMatchesByTournamentId(tournamentid);
             AllMatches.OrderBy(x => x.Id).ToList();
+
+            AllMatchesInformation = new List<List<string>>();
+
+            // tournament results with player names instead of ids
+            foreach (Match match in AllMatches)
+            {
+                // convert player one id to name
+                string playerOneName = userManager.GetUser(match.PlayerOne).FirstName + " " + userManager.GetUser(match.PlayerOne).LastName;
+                string playerTwoName = userManager.GetUser(match.PlayerTwo).FirstName + " " + userManager.GetUser(match.PlayerTwo).LastName;
+
+                AllMatchesInformation.Add(new List<string> { match.Stage, playerOneName, match.PlayerOneScore.ToString(), playerTwoName, match.PlayerTwoScore.ToString(),
+                match.Status.ToString()});
+            }
+
+            // make a ranking
+            // make a list of participants
+            List<int> participantsId = new List<int>();
+            foreach (Participation participation in ListOfParticipation)
+            {
+                participantsId.Add(participation.PlayerId);
+            }
+
+            List<Match> finishedMatches = new List<Match>();
+            // filter list to only finished matches
+            foreach (Match match in AllMatches)
+            {
+                if (match.Status == MatchStatus.FINISHED)
+                {
+                    finishedMatches.Add(match);
+                }
+            }
+            List<List<int>> tempRanking = new List<List<int>>();
+            tempRanking = tournamentManager.Ranking(finishedMatches, participantsId);
+
+            Ranking = new List<List<string>>();
+
+            int rank = 1;
+            // list of int to string
+            foreach (var item in tempRanking)
+            {
+                // convert player one id to name
+                string playerName = userManager.GetUser(item[0]).FirstName + " " + userManager.GetUser(item[0]).LastName;
+
+                // 0 = participant, 1 = # win, 2 = # lost, 3 = roundfor, 4 = roundagainst
+                Ranking.Add(new List<string> { rank.ToString(), playerName, item[1].ToString(), item[2].ToString(), item[3].ToString(), item[4].ToString() });
+                rank++;
+            }
         }
 
         public IActionResult OnPostRegister(int tournamentid, int userid)

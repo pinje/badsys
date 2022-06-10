@@ -99,20 +99,143 @@
     </div>
     <h1>TOURNAMENT RESULTS</h1>
     @if (Model.Tournament.System == Models.TournamentSystem.ROUND_ROBIN) {
-        // display per round, all matches
-        foreach(Match match in Model.AllMatches)
+        <h3>RANKING</h3>
+        <div class="ranking">   
+            <div class="row-head">
+                <div>#</div>
+                <div>Name</div>
+                <div>Win - Lost</div>
+                <div>RF - RA</div>
+                <div>RD</div>
+                <div>Points</div>
+            </div>
+        @foreach(var item in Model.Ranking)
         {
-            <div>@match.Id</div>
+            <div class="row">
+                <div>@item[0]</div>
+                <div>@item[1]</div>
+                <div>@item[2] - @item[3]</div>
+                <div>@item[4] - @item[5]</div>
+                <div>@(Convert.ToInt16(item[4]) - Convert.ToInt16(item[5]))</div>
+                <div>@item[2] pts</div>
+            </div>
         }
+        </div>
+    <h3>SCHEDULE AND RESULTS</h3>
+    <div class="tournament-result">
+        <div class="row-head">
+            <div>Stage</div>
+            <div class="playerone">Score</div>
+            <div class="playeronescore"></div>
+            <div class="vs"></div>
+            <div class="playertwoscore"></div>
+            <div class="playertwo"></div>
+            <div class="status"></div>
+        </div>
+        @foreach(var match in Model.AllMatchesInformation)
+        {
+            // display per round, all matches
+            <div class="row">
+                <div>@match[0]</div>
+                <div style="text-align: right">@match[1]</div>
+                @if (match[5].ToString() == MatchStatus.UPCOMING.ToString())
+                {
+                    <div style="text-align: right"></div>
+                    <div style="text-align: center">VS</div>
+                    <div style="text-align: left"></div>
+                } else if (match[5].ToString() == MatchStatus.FINISHED.ToString())
+                {
+                    <div style="text-align: right">@match[2]</div>
+                    <div style="text-align: center">-</div>
+                    <div style="text-align: left">@match[4]</div>
+                } else if (match[5].ToString() == MatchStatus.CANCELLED.ToString())
+                {
+                    <div style="text-align: right"></div>
+                    <div style="text-align: center">X</div>
+                    <div style="text-align: left"></div>
+                } else
+                {
+                    <div style="text-align: right"></div>
+                    <div style="text-align: center">-</div>
+                    <div style="text-align: left"></div>
+                }
+                <div style="text-align: left">@match[3]</div>
+                @if (match[5].ToString() == MatchStatus.UPCOMING.ToString())
+                {
+                    <div class="upcoming-box">UPCOMING</div>
+                } else if (match[5].ToString() == MatchStatus.FINISHED.ToString())
+                {
+                    <div class="finished-box">FINISHED</div>
+                } else if (match[5].ToString() == MatchStatus.CANCELLED.ToString())
+                {
+                    <div class="cancelled-box">CANCELLED</div>
+                } else
+                {
+                    <div class="onhold-box">ONHOLD</div>
+                }
+            </div>
+        }
+    </div>
     } else if (Model.Tournament.System == Models.TournamentSystem.SINGLE_ELIMINATION) {
-        // display per round, all matches
-        foreach(Match match in Model.AllMatches)
+        <h3>SCHEDULE AND RESULTS</h3>
+        <div class="tournament-result">
+            <div class="row-head">
+                <div>Stage</div>
+                <div class="playerone">Score</div>
+                <div class="playeronescore"></div>
+                <div class="vs"></div>
+                <div class="playertwoscore"></div>
+                <div class="playertwo"></div>
+                <div class="status"></div>
+            </div>
+        @foreach(var match in Model.AllMatchesInformation)
         {
-            <div>@match.Id</div>
+            // display per round, all matches
+            <div class="row">
+                <div>@match[0]</div>
+                <div style="text-align: right">@match[1]</div>
+                @if (match[5].ToString() == MatchStatus.UPCOMING.ToString())
+                {
+                    <div style="text-align: right"></div>
+                    <div style="text-align: center">VS</div>
+                    <div style="text-align: left"></div>
+                } else if (match[5].ToString() == MatchStatus.FINISHED.ToString())
+                {
+                    <div style="text-align: right">@match[2]</div>
+                    <div style="text-align: center">-</div>
+                    <div style="text-align: left">@match[4]</div>
+                } else if (match[5].ToString() == MatchStatus.CANCELLED.ToString())
+                {
+                    <div style="text-align: right"></div>
+                    <div style="text-align: center">X</div>
+                    <div style="text-align: left"></div>
+                } else
+                {
+                    <div style="text-align: right"></div>
+                    <div style="text-align: center">-</div>
+                    <div style="text-align: left"></div>
+                }
+                <div style="text-align: left">@match[3]</div>
+                @if (match[5].ToString() == MatchStatus.UPCOMING.ToString())
+                {
+                    <div class="upcoming-box">UPCOMING</div>
+                } else if (match[5].ToString() == MatchStatus.FINISHED.ToString())
+                {
+                    <div class="finished-box">FINISHED</div>
+                } else if (match[5].ToString() == MatchStatus.CANCELLED.ToString())
+                {
+                    <div class="cancelled-box">CANCELLED</div>
+                } else
+                {
+                    <div class="onhold-box">ONHOLD</div>
+                }
+            </div>
         }
+        </div>
     } else {
         <h1>DOUBLE ELIMINATION RESULTS</h1>
     }
+    
     <h1>PARTICIPANTS</h1>
     <div class="participants">
         <div class="name-title" style="font-weight: bold">Name</div>

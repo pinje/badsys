@@ -906,19 +906,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Shuhei Hagiwara\\.nuget\\packages\\": {}
+    "C:\\Users\\Shuhei\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\WindowsForms\\WindowsForms.csproj",
+      "projectUniqueName": "C:\\Users\\Shuhei\\Documents\\S2-CB01\\Synthesis Assignment\\badsys\\BADSYS\\WindowsForms\\WindowsForms.csproj",
       "projectName": "WindowsForms",
-      "projectPath": "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\WindowsForms\\WindowsForms.csproj",
-      "packagesPath": "C:\\Users\\Shuhei Hagiwara\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\WindowsForms\\obj\\",
+      "projectPath": "C:\\Users\\Shuhei\\Documents\\S2-CB01\\Synthesis Assignment\\badsys\\BADSYS\\WindowsForms\\WindowsForms.csproj",
+      "packagesPath": "C:\\Users\\Shuhei\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Shuhei\\Documents\\S2-CB01\\Synthesis Assignment\\badsys\\BADSYS\\WindowsForms\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Shuhei Hagiwara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Shuhei\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -932,11 +936,11 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\DLL\\DLL.csproj": {
-              "projectPath": "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\DLL\\DLL.csproj"
+            "C:\\Users\\Shuhei\\Documents\\S2-CB01\\Synthesis Assignment\\badsys\\BADSYS\\DLL\\DLL.csproj": {
+              "projectPath": "C:\\Users\\Shuhei\\Documents\\S2-CB01\\Synthesis Assignment\\badsys\\BADSYS\\DLL\\DLL.csproj"
             },
-            "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\Models\\Models.csproj": {
-              "projectPath": "C:\\Users\\Shuhei Hagiwara\\Documents\\Synthesis Assignment\\badsys\\BADSYS\\Models\\Models.csproj"
+            "C:\\Users\\Shuhei\\Documents\\S2-CB01\\Synthesis Assignment\\badsys\\BADSYS\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\Shuhei\\Documents\\S2-CB01\\Synthesis Assignment\\badsys\\BADSYS\\Models\\Models.csproj"
             }
           }
         }
@@ -968,7 +972,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

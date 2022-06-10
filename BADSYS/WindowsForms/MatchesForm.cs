@@ -127,7 +127,6 @@ namespace WindowsForms
         private void comboBox_tournamentselect_SelectionChangeCommitted(object sender, EventArgs e)
         {
             DisplayUpdate(Convert.ToInt16(comboBox_tournamentselect.SelectedValue));
-
         }
     }
 }

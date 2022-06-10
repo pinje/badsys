@@ -6,9 +6,11 @@ using DAL.UserBranch;
 using DAL.ParticipationBranch;
 using DAL.TournamentBranch;
 using DAL.MatchBranch;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BADSYS.Pages
 {
+    [Authorize(Roles = "User")]
     public class ProfileModel : PageModel
     {
         [BindProperty]
